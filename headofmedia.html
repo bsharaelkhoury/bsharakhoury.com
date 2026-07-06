@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bechara El Khoury - Head of Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0A0B0D;--bg2:#0f1013;--bg3:#13141A;--panel:#1a1b22;
+  --border:#1e2028;--dim:#2a2c38;--muted:#52566A;--text:#9A9EAF;
+  --light:#C8CBD8;--white:#F3F1EB;
+  --gold:#C2A06A;--gold2:#DCC089;--gold-d:rgba(194,160,106,0.25);
+  --teal:#00C2D4;
+  --display:"Bebas Neue",sans-serif;
+  --cond:"Oswald",sans-serif;
+  --body:"Inter",sans-serif;
+  --mono:"Courier Prime",monospace;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;line-height:1.6;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--gold);}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* SCROLL PROGRESS */
+.scroll-prog{position:fixed;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:200;}
+
+/* NAV */
+nav{position:fixed;top:2px;left:0;right:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(10,11,13,0.96);backdrop-filter:blur(16px);}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 48px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.nav-back{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);transition:color 0.2s;}
+.nav-back:hover{color:var(--gold);}
+.nav-back svg{width:16px;height:16px;}
+.nav-brand{font-family:var(--display);font-size:16px;letter-spacing:0.15em;color:var(--white);position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--bg);background:var(--gold);padding:8px 18px;transition:opacity 0.2s;}
+.nav-cta:hover{opacity:0.8;}
+
+/* WRAP */
+.wrap{max-width:1320px;margin:0 auto;padding:0 48px;}
+
+/* EYEBROW */
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+
+/* HERO */
+.hero{padding:160px 0 100px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:0.35;}
+.hero-glow{position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse at center,rgba(194,160,106,0.07) 0%,transparent 70%);pointer-events:none;}
+.hero-content{position:relative;z-index:1;}
+.hero-title{font-family:var(--display);font-size:clamp(80px,12vw,160px);line-height:0.88;color:var(--white);letter-spacing:0.02em;margin-bottom:20px;}
+.hero-title .ln2{display:block;color:var(--gold);}
+.hero-sub{font-family:var(--mono);font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);margin-bottom:60px;}
+.hero-split{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border:1px solid var(--border);}
+.hero-left{padding:44px 56px 44px 44px;}
+.hero-divider{width:1px;background:var(--border);}
+.hero-right{padding:44px 44px 44px 56px;}
+.hero-intro{font-size:15px;color:var(--text);line-height:1.95;max-width:480px;margin-bottom:40px;}
+.hero-intro b{color:var(--white);font-weight:500;}
+
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);}
+.stat{padding:26px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stat:nth-child(2n){border-right:none;}
+.stat:nth-child(n+3){border-bottom:none;}
+.stat-num{font-family:var(--display);font-size:50px;line-height:0.9;color:var(--gold);letter-spacing:0.01em;}
+.stat-num .sfx{font-size:26px;vertical-align:top;}
+.stat-num.teal{color:var(--teal);}
+.stat-lbl{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.18em;margin-top:10px;}
+
+.text-link{display:inline-flex;align-items:center;gap:12px;margin-top:38px;font-family:var(--cond);font-weight:500;font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold2);padding-bottom:8px;border-bottom:1px solid var(--gold-d);transition:gap 0.25s;}
+.text-link:hover{gap:20px;border-color:var(--gold2);}
+.col-label{font-family:var(--cond);font-weight:600;font-size:14px;color:var(--white);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:8px;}
+.hl-list{list-style:none;}
+.hl-row{display:grid;grid-template-columns:38px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--border);}
+.hl-row:last-child{border-bottom:none;}
+.hl-ico{width:38px;height:38px;color:var(--gold);display:flex;align-items:flex-start;}
+.hl-ico svg{width:30px;height:30px;}
+.hl-title{font-family:var(--cond);font-weight:500;font-size:16px;color:var(--white);letter-spacing:0.04em;margin-bottom:6px;}
+.hl-desc{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.85;letter-spacing:0.01em;}
+
+/* SECTIONS */
+section{padding:112px 0;position:relative;}
+section+section{border-top:1px solid var(--border);}
+.sec-head{margin-bottom:64px;}
+.sec-title{font-family:var(--display);text-transform:uppercase;color:var(--white);font-size:clamp(40px,6vw,86px);line-height:0.92;letter-spacing:0.006em;margin:18px 0 0;}
+.sec-title .gold{color:var(--gold);}
+.sec-intro{font-size:15px;color:var(--text);max-width:600px;line-height:1.95;margin-top:26px;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.05s;}.d2{transition-delay:0.1s;}.d3{transition-delay:0.2s;}.d4{transition-delay:0.32s;}
+
+/* ROLE */
+.roles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.role-card{padding:44px 34px;background:var(--bg3);transition:background 0.3s;position:relative;}
+.role-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
+.role-card:hover::before{transform:scaleX(1);}
+.role-card:hover{background:var(--panel);}
+.role-num{font-family:var(--mono);font-size:11px;color:var(--gold);margin-bottom:22px;letter-spacing:0.14em;}
+.role-title{font-family:var(--cond);font-weight:500;font-size:22px;line-height:1.12;color:var(--white);text-transform:uppercase;letter-spacing:0.02em;margin-bottom:16px;}
+.role-desc{font-size:13px;color:var(--text);line-height:1.85;}
+.role-tags{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;}
+.rtag{font-family:var(--mono);font-size:10px;padding:5px 11px;border:1px solid var(--dim);color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;}
+
+/* DOMAINS */
+.domains-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.domain-card{padding:32px 28px;background:var(--bg3);transition:background 0.3s;}
+.domain-card:hover{background:var(--panel);}
+.icon-chip{width:42px;height:42px;border:1px solid var(--dim);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:20px;}
+.icon-chip svg{width:22px;height:22px;}
+.domain-name{font-family:var(--cond);font-weight:500;font-size:17px;color:var(--white);letter-spacing:0.04em;margin-bottom:10px;}
+.domain-desc{font-size:12px;color:var(--text);line-height:1.8;}
+.domain-count-badge{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-d);padding:4px 10px;}
+
+/* REELS */
+#reels{padding:112px 0;border-top:1px solid var(--border);}
+.reels-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;}
+.reel-scroll-hint{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--muted);margin-top:8px;}
+.reel-arrows{display:flex;gap:10px;}
+.reel-arrows button{width:42px;height:42px;background:none;border:1px solid var(--border);color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color 0.2s,color 0.2s;}
+.reel-arrows button:hover{border-color:var(--gold);color:var(--gold);}
+.reel-rail{display:flex;gap:22px;overflow-x:auto;padding:0 48px 32px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.reel-rail::-webkit-scrollbar{display:none;}
+.reel-card{flex:0 0 300px;}
+.reel-embed-box{position:relative;width:300px;height:534px;overflow:hidden;background:var(--bg3);border:1px solid var(--border);}
+.reel-embed{position:absolute;top:-2px;left:-2px;width:calc(100% + 4px);height:calc(100% + 4px);border:none;}
+.reel-media{display:block;width:300px;height:534px;background:var(--bg3);border:1px solid var(--border);position:relative;overflow:hidden;}
+.reel-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;}
+.reel-play{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);}
+.reel-play svg{width:22px;height:22px;}
+.reel-ph-tag{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.reel-meta{padding:16px 4px 0;}
+.reel-num{font-family:var(--mono);font-size:9px;letter-spacing:0.22em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.reel-title{font-family:var(--cond);font-weight:500;font-size:16px;color:var(--white);letter-spacing:0.04em;}
+.reel-sub{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:4px;}
+
+/* PRODUCTIONS */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.proj-card{padding:40px 32px;background:var(--bg3);transition:background 0.3s;}
+.proj-card:hover{background:var(--panel);}
+.proj-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;}
+.proj-name{font-family:var(--cond);font-weight:500;font-size:20px;color:var(--white);letter-spacing:0.03em;margin-bottom:16px;line-height:1.2;}
+.proj-detail{font-size:13px;color:var(--text);line-height:1.85;}
+.proj-meta{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;}
+.pmeta{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;color:var(--muted);border:1px solid var(--dim);padding:5px 10px;}
+
+/* QUOTE */
+.quote-section{padding:80px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);}
+.quote-inner{display:flex;gap:36px;align-items:flex-start;}
+.quote-mark{font-family:var(--display);font-size:120px;color:var(--gold);line-height:0.7;flex-shrink:0;margin-top:-8px;}
+.quote-text{font-family:var(--cond);font-weight:300;font-size:clamp(22px,3vw,34px);color:var(--white);line-height:1.35;letter-spacing:0.01em;}
+.quote-text em{color:var(--gold);font-style:normal;}
+.quote-attr{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:22px;}
+
+/* METRICS */
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:52px;}
+.metric-block{padding:44px 36px;background:var(--bg3);}
+.metric-block.accent{background:var(--panel);}
+.metric-big{font-family:var(--display);font-size:clamp(64px,7vw,96px);line-height:0.88;margin-bottom:16px;}
+.metric-big .t{color:var(--gold);}
+.metric-big .g{color:var(--teal);}
+.metric-big .sfx{font-size:0.45em;vertical-align:top;margin-top:0.1em;}
+.metric-title{font-family:var(--cond);font-weight:500;font-size:16px;color:var(--white);letter-spacing:0.03em;margin-bottom:14px;line-height:1.3;}
+.metric-desc{font-size:12.5px;color:var(--text);line-height:1.85;}
+.metric-desc b{color:var(--light);font-weight:500;}
+
+/* VIZ */
+.viz-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.viz-card{padding:44px 40px;background:var(--bg3);}
+.viz-head{margin-bottom:32px;}
+.viz-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);}
+.viz-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);margin-left:16px;}
+.donut-row{display:flex;align-items:center;gap:48px;}
+.donut{width:180px;height:180px;flex-shrink:0;}
+.track{fill:none;stroke:var(--dim);stroke-width:24;}
+.seg{fill:none;stroke-width:24;stroke-dasharray:var(--da);transition:stroke-dasharray 1s ease;}
+.donut-center-num{font-family:var(--display);font-size:32px;fill:var(--white);}
+.donut-center-lbl{font-family:var(--mono);font-size:8px;fill:var(--muted);letter-spacing:0.15em;text-transform:uppercase;}
+.legend{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.legend li{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;color:var(--text);}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.lg-name{flex:1;}
+.lg-val{color:var(--white);font-weight:500;min-width:24px;}
+.lg-pct{color:var(--muted);min-width:36px;}
+.bars{display:flex;flex-direction:column;gap:10px;}
+.bar-row{display:grid;grid-template-columns:130px 1fr 32px;gap:12px;align-items:center;}
+.bar-lbl{font-family:var(--mono);font-size:10px;color:var(--text);letter-spacing:0.04em;}
+.bar-track{height:4px;background:var(--dim);position:relative;}
+.bar-fill{position:absolute;top:0;left:0;height:100%;width:var(--w);background:var(--teal);transform-origin:left;transform:scaleX(0);transition:transform 1s ease;}
+.bar-row.hl .bar-fill{background:var(--gold);}
+.bar-val{font-family:var(--mono);font-size:10px;color:var(--gold);text-align:right;}
+
+/* OPS */
+.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.ops-card{padding:44px 36px;background:var(--bg3);transition:background 0.3s;}
+.ops-card:hover{background:var(--panel);}
+.ops-icon{width:44px;height:44px;border:1px solid var(--dim);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:24px;}
+.ops-icon svg{width:22px;height:22px;}
+.ops-title{font-family:var(--cond);font-weight:500;font-size:19px;color:var(--white);letter-spacing:0.03em;margin-bottom:12px;}
+.ops-desc{font-size:13px;color:var(--text);line-height:1.8;margin-bottom:20px;}
+.ops-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.ops-list li{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.05em;padding-left:16px;position:relative;}
+.ops-list li::before{content:"·";position:absolute;left:0;color:var(--gold);}
+
+/* APPROACH */
+.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.approach-card{padding:52px 44px;background:var(--bg3);transition:background 0.3s;}
+.approach-card:hover{background:var(--panel);}
+.approach-num{font-family:var(--display);font-size:56px;color:var(--dim);line-height:1;margin-bottom:20px;}
+.approach-title{font-family:var(--cond);font-weight:500;font-size:22px;color:var(--white);letter-spacing:0.03em;margin-bottom:16px;}
+.approach-desc{font-size:14px;color:var(--text);line-height:1.9;}
+.approach-desc em{color:var(--gold);font-style:normal;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:64px 0;}
+.footer-line{height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin-bottom:56px;}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-end;}
+.footer-name{font-family:var(--display);font-size:48px;color:var(--white);letter-spacing:0.04em;}
+.footer-name span{color:var(--gold);}
+.footer-role{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+.footer-meta{text-align:right;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.8;letter-spacing:0.06em;}
+.footer-meta strong{color:var(--text);}
+
+/* MOBILE */
+@media(max-width:1024px){
+  .wrap{padding:0 28px;}
+  .hero-split{grid-template-columns:1fr;}.hero-divider{display:none;}.hero-left{padding:36px;border-bottom:1px solid var(--border);}.hero-right{padding:36px;}
+  .roles-grid,.domains-grid{grid-template-columns:repeat(2,1fr);}
+  .metrics-grid{grid-template-columns:repeat(2,1fr);}
+  .proj-grid{grid-template-columns:repeat(2,1fr);}
+  .viz-wrap{grid-template-columns:1fr;}
+  .ops-grid{grid-template-columns:repeat(2,1fr);}
+  .approach-grid{grid-template-columns:1fr;}
+  .footer-inner{flex-direction:column;gap:32px;text-align:center;}.footer-meta{text-align:center;}
+  nav{display:none;}
+}
+@media(max-width:640px){
+  .roles-grid,.domains-grid,.metrics-grid,.proj-grid,.ops-grid{grid-template-columns:1fr;}
+  .hero-title{font-size:clamp(60px,18vw,90px);}
+  .reel-rail{padding:0 20px 24px;}
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-prog"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to Portfolio
+    </a>
+    <div class="nav-brand">Bechara El Khoury</div>
+    <div class="nav-links">
+      <a href="#role">Role</a>
+      <a href="#domains">Domains</a>
+      <a href="#reels">Reels</a>
+      <a href="#productions">Work</a>
+      <a href="#scale">Scale</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow fade-up d1">Bechara El Khoury &middot; Dubai &middot; UAE</p>
+    <h1 class="hero-title fade-up d2">Head of<span class="ln2">Media</span></h1>
+    <p class="hero-sub fade-up d3">Creative Director &middot; Cinematographer &middot; Department Architect</p>
+    <div class="hero-split fade-up d4">
+      <div class="hero-left">
+        <p class="hero-intro">Built and led an <b>in-house media department</b> at Beno &middot; a Dubai-based luxury concierge group &middot; from the ground up. In under a year, directed, shot, supervised, and delivered <b>107 productions</b> across the full spectrum of lifestyle content &mdash; architecting every workflow, OKR framework, and creative standard the department runs on.</p>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num"><span data-count="107">0</span><span class="sfx">+</span></div><div class="stat-lbl">Productions</div></div>
+          <div class="stat"><div class="stat-num"><span data-count="28">0</span></div><div class="stat-lbl">Shoots Led &middot; DOP</div></div>
+          <div class="stat"><div class="stat-num"><span data-count="12">0</span><span class="sfx">+</span></div><div class="stat-lbl">Content Domains</div></div>
+          <div class="stat"><div class="stat-num teal"><span data-count="100">0</span><span class="sfx">%</span></div><div class="stat-lbl">In-House Build</div></div>
+        </div>
+        <a href="#productions" class="text-link">Explore the work <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-right">
+        <p class="col-label">Production Highlights</p>
+        <ul class="hl-list">
+          <li class="hl-row"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span><div><div class="hl-title">Department built from zero</div><div class="hl-desc">Studio, equipment, hiring, pipeline and brand standard &mdash; all designed in the first 90 days.</div></div></li>
+          <li class="hl-row"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="1.5"/><path d="M2.5 10h19M7 6l-1.5 4M12 6l-1.5 4M17 6l-1.5 4"/></svg></span><div><div class="hl-title">107 productions in under a year</div><div class="hl-desc">Shoots, edits, photo sets, campaigns, series, podcasts. Every category, all in-house.</div></div></li>
+          <li class="hl-row"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="1.5"/><path d="M16 10l5-3v10l-5-3z"/></svg></span><div><div class="hl-title">28 shoots directed &amp; shot</div><div class="hl-desc">Lead director and cinematographer on every shoot &mdash; multiple camera formats and crew.</div></div></li>
+          <li class="hl-row"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14M4 5h13l-2.5 3.5L17 12H4"/></svg></span><div><div class="hl-title">70+ edits supervised to delivery</div><div class="hl-desc">Color grade, VO, sound and music &mdash; reviewed through Frame.io to final cut.</div></div></li>
+          <li class="hl-row"><span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span><div><div class="hl-title">12+ content worlds covered</div><div class="hl-desc">Cars, yachts, desert, water, rallies, events, hospitality, brand and podcast.</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE -->
+<section id="role">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The Role</p>
+      <h2 class="sec-title">Not one job.<br><span class="gold">Six in parallel.</span></h2>
+      <p class="sec-intro">The Head of Media role at Beno covered the full creative and operational stack simultaneously &middot; from concept to camera to cut to delivery.</p>
+    </div>
+    <div class="roles-grid reveal">
+      <div class="role-card"><div class="role-num">01 / CREATIVE</div><div class="role-title">Head of Media &amp; Creative Director</div><div class="role-desc">Set the creative direction for all productions. Defined visual language, storytelling approach, and brand aesthetic across every content category. Built the editorial framework that unified all output under a coherent identity.</div><div class="role-tags"><span class="rtag">Visual Identity</span><span class="rtag">Art Direction</span><span class="rtag">Creative Briefs</span><span class="rtag">OKR / Scoreboard</span></div></div>
+      <div class="role-card"><div class="role-num">02 / PRODUCTION</div><div class="role-title">Director &amp; Cinematographer</div><div class="role-desc">Led all 28 shoots &middot; from night desert shoots to multi-day rally productions in Fujairah. Operated cinema line cameras, directed talent, controlled lighting design, and supervised every frame that went to post.</div><div class="role-tags"><span class="rtag">Cinema Cameras</span><span class="rtag">Gimbal &middot; Insta360</span><span class="rtag">Lighting Design</span><span class="rtag">On-Set Direction</span></div></div>
+      <div class="role-card"><div class="role-num">03 / LEADERSHIP</div><div class="role-title">Team Builder &amp; Department Architect</div><div class="role-desc">Founded the department structure from zero. Hired and onboarded 3 editors and 2 videographers. Built all operating systems: brief intake, review hierarchy, equipment protocols, performance tracking. Grew the team from 1 to 7 at peak.</div><div class="role-tags"><span class="rtag">Hiring &amp; Screening</span><span class="rtag">Team Training</span><span class="rtag">Dept Architecture</span><span class="rtag">Performance KPIs</span></div></div>
+      <div class="role-card"><div class="role-num">04 / POST-PRODUCTION</div><div class="role-title">Color Grade &middot; Sound &middot; Supervision</div><div class="role-desc">Supervised all editorial output across 70+ video edits. Personally applied LUT color grading on flagship productions. Directed sound design, VO recording, music selection. Every edit passed through creative review before delivery.</div><div class="role-tags"><span class="rtag">LUT Grading</span><span class="rtag">VO Direction</span><span class="rtag">Frame.io Review</span><span class="rtag">Sound Design</span></div></div>
+      <div class="role-card"><div class="role-num">05 / STRATEGY</div><div class="role-title">Producer &amp; Content Strategist</div><div class="role-desc">Designed 3-phase department roadmap (Foundation &rarr; Scale &rarr; Full Capability). Built content strategies adapted to seasonal moments, brand priorities, and platform demands. Managed stakeholder communication, budgets, and equipment procurement.</div><div class="role-tags"><span class="rtag">Phase Planning</span><span class="rtag">Scheduling</span><span class="rtag">Budget Planning</span><span class="rtag">Stakeholder Mgmt</span></div></div>
+      <div class="role-card"><div class="role-num">06 / INNOVATION</div><div class="role-title">AI Integration &amp; Display Systems</div><div class="role-desc">Integrated AI-generated content. Planned AI tool pipeline for production efficiency. Used AutoCut for podcast multi-cam editing workflow. Built custom display systems for brand activation.</div><div class="role-tags"><span class="rtag">AI Content</span><span class="rtag">Custom Display</span><span class="rtag">Multi-cam Setup</span><span class="rtag">Tool Pipeline</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAINS -->
+<section id="domains">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Content Domains</p>
+      <h2 class="sec-title">One department.<br><span class="gold">Every world.</span></h2>
+      <p class="sec-intro">Beno's business spans the full luxury lifestyle spectrum. The media department covered every vertical &middot; from hypercar shoots at night to watersports action, from intimate yacht events to multi-day desert rallies.</p>
+    </div>
+    <div class="domains-grid reveal">
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13.5l1.7-4.6A2.5 2.5 0 0 1 7 7.2h10a2.5 2.5 0 0 1 2.3 1.7l1.7 4.6"/><path d="M3 13.5h18v3.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-1H6.5v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M7 15.5h2M15 15.5h2"/></svg></div><div class="domain-name">Luxury Cars</div><div class="domain-desc">Asset films, social reels, night shoots, multi-car campaigns. Hypercars, SUVs, sports cars. Shot across roads, rallies, desert, and mountains.</div><div class="domain-count-badge">15+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h16l-2.5 4.5a2 2 0 0 1-1.7 1H8.2a2 2 0 0 1-1.7-1z"/><path d="M6 14l.8-5.2a1 1 0 0 1 1-.8h8.4a1 1 0 0 1 1 .8L18 14"/><path d="M12 3v5"/></svg></div><div class="domain-name">Yachts &amp; Marine</div><div class="domain-desc">Multiple vessels. Event highlights, asset campaigns, social series, hospitality content. Marsa al Arab waterfront.</div><div class="domain-count-badge">12+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16.5" cy="7" r="2.8"/><path d="M3 18c2.5 0 2.5-2.6 5-2.6s2.5 2.6 5 2.6 2.5-2.6 5-2.6"/><path d="M3 21h18"/></svg></div><div class="domain-name">Desert Experiences</div><div class="domain-desc">Traditional desert night shoots, dune buggies, 4x4 off-road, desert reception events. Full cinematic treatment.</div><div class="domain-count-badge">8+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4.5c3.2-1.8 6.3 1.4 9.5 0 1.2-.5 2.3-.6 3.5-.2v8c-1.2-.4-2.3-.3-3.5.2-3.2 1.4-6.3-1.8-9.5 0z"/></svg></div><div class="domain-name">Rallies &amp; Motorsport</div><div class="domain-desc">Velvet Velocity Rally (3-day Fujairah expedition), Cars &amp; Cigars, JA Supercar Rally, Beno Supercars series.</div><div class="domain-count-badge">10+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"/><path d="M3 12.5c1.5-1.5 3-1.5 4.5 0s3 1.5 4.5 0 3-1.5 4.5 0 3 1.5 4.5 0"/></svg></div><div class="domain-name">Water Sports &amp; Action</div><div class="domain-desc">Action sports filming, youngsters watersports series, summer campaign content, multi watersports experiences.</div><div class="domain-count-badge">6+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3.4"/><circle cx="18" cy="16" r="3.4"/><path d="M6 16l4-7.5h4.5"/><path d="M9 8.5h3l2.8 7.5M14.5 8.5l1.3-2.5h2"/></svg></div><div class="domain-name">Cycling &amp; Lifestyle</div><div class="domain-desc">Stajvelo x Beno Wellness Day. KTM bike collaboration. Stajvelo brand campaign. Website commercial content.</div><div class="domain-count-badge">4 productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3h9l-1 7a3.5 3.5 0 0 1-7 0z"/><path d="M12 14v5"/><path d="M8.5 20.5h7"/></svg></div><div class="domain-name">Luxury Events</div><div class="domain-desc">Nautical Soiree, Globe Soccer, Golden Keys gala, high profile brands and entities. Full event highlight production.</div><div class="domain-count-badge">10+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13.5l4-3"/><path d="M11 7.5l1.2-1.2a3.5 3.5 0 0 1 5 5L16 12.5"/><path d="M13 16.5l-1.2 1.2a3.5 3.5 0 0 1-5-5L8 11.5"/></svg></div><div class="domain-name">Collaborations</div><div class="domain-desc">RightJet, Globe Soccer, Versace brand event, Villa 88 watch campaign, La Villa Banya SPA experience.</div><div class="domain-count-badge">8+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3.6"/><path d="M10.6 10.6l8 8"/></svg></div><div class="domain-name">Hospitality &amp; Tourism</div><div class="domain-desc">Marsa al Arab Island, JBR Waterfront, Jumeirah Group, One &amp; Only, Burj Al Arab, and Address Hotels.</div><div class="domain-count-badge">5+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13.2A8 8 0 1 1 10.8 4a6.2 6.2 0 0 0 9.2 9.2z"/></svg></div><div class="domain-name">Seasonal Campaigns</div><div class="domain-desc">Christmas, UAE National Day, New Year, Valentine's Day, Mother's Day, Women's Day, Ramadan/Eid, summer.</div><div class="domain-count-badge">12+ productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21"/></svg></div><div class="domain-name">Long-form &amp; Podcast</div><div class="domain-desc">Beno x WEB3 Podcast &middot; multi-cam studio production, 30-40min episode, BTS series, social clip packages.</div><div class="domain-count-badge">5 productions</div></div>
+      <div class="domain-card"><div class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3-4.5h8L19 9l-7 11z"/><path d="M5 9h14"/></svg></div><div class="domain-name">Brand &amp; Display</div><div class="domain-desc">AI-integrated brand content. Beno Team Series across 4 categories. Brand manifesto creation and visual identity framework.</div><div class="domain-count-badge">6+ productions</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section id="reels">
+  <div class="wrap">
+    <div class="reels-head reveal">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="sec-title">Reels &amp; Films</h2>
+        <p class="reel-scroll-hint">Swipe / drag to explore the work &rarr;</p>
+      </div>
+      <div class="reel-arrows">
+        <button aria-label="Previous" onclick="scrollReel(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button aria-label="Next" onclick="scrollReel(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="reel-rail" id="reelRail">
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DWrRhMniVVx/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 01</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DWZNfpTDTsi/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 02</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><a class="reel-media" href="https://next.frame.io/project/0a44aa93-1060-4e4f-b6df-45cceb6c6617/view/9037b565-cc57-476a-aba5-537070065da8" target="_blank" rel="noopener"><div class="reel-ph"><div class="reel-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="reel-ph-tag">Frame.io &middot; Watch</span></div></a><div class="reel-meta"><div class="reel-num">FEATURE</div><div class="reel-title">Full Campaign Cut</div><div class="reel-sub">Frame.io review &nearr;</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DW6TaV6CBfi/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 03</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DWI167PkUfE/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 04</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DVbX5dvADm6/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 05</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DZc2CUCCrZ4/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 06</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DTVGsZ9gTP9/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 07</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DZ0Er6DDzfB/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 08</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+    <div class="reel-card"><div class="reel-embed-box"><iframe class="reel-embed" src="https://www.instagram.com/reel/DSUMyWogj4i/embed/" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div><div class="reel-meta"><div class="reel-num">REEL 09</div><div class="reel-title">Instagram &middot; Beno</div><div class="reel-sub">Selected work</div></div></div>
+  </div>
+</section>
+
+<!-- PRODUCTIONS -->
+<section id="productions">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Production Approach</p>
+      <h2 class="sec-title">How the work<br><span class="gold">gets done.</span></h2>
+      <p class="sec-intro">A cross-section of production types &mdash; each with its own creative, logistical, and directorial demands. What stays constant is full ownership, concept to delivery.</p>
+    </div>
+    <div class="proj-grid reveal">
+      <div class="proj-card"><div class="proj-tag">Campaign &middot; Multi-Day &middot; Cinematic</div><div class="proj-name">Velvet Velocity Rally Campaign</div><div class="proj-detail">Full campaign ownership across multiple editions, scripted in commercial film style. Multi-day shoots across UAE roads and Fujairah mountain terrain, personally color-graded, and delivered as a full ecosystem &mdash; hero film, reels, teasers, and social.</div><div class="proj-meta"><span class="pmeta">Multi-edition</span><span class="pmeta">10+ deliverables</span><span class="pmeta">Metrics tracked</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Multi-Day Expeditions &middot; Action &middot; Logistics</div><div class="proj-name">Supercar Rallies &amp; Desert Experiences</div><div class="proj-detail">Led media and partner teams across multi-day supercar rallies and desert off-road expeditions. Managed convoy, permits, safety, and shot sequencing under pressure &mdash; capturing action, environment, and experience within a single production day.</div><div class="proj-meta"><span class="pmeta">Multi-day</span><span class="pmeta">Full team led</span><span class="pmeta">Action + cinematic</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Hospitality &middot; Series &middot; Marine Logistics</div><div class="proj-name">Yacht Experience &amp; Hospitality</div><div class="proj-detail">Ongoing content series across Beno's yacht fleet and waterfront. Planned around marine timing and access, blending cinematic hero sequences with experiential storytelling. Multi-format packages delivered for social, website, and booking channels.</div><div class="proj-meta"><span class="pmeta">Multiple vessels</span><span class="pmeta">Full team led</span><span class="pmeta">Multi-format</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Long-Form &middot; Studio &middot; Full Crew Direction</div><div class="proj-name">Beno x WEB3 Podcast</div><div class="proj-detail">Director and producer of a full broadcast podcast at Real Engine Technology Studios. Led a 10-person crew across a multi-cam 4K setup, guiding hosts on structure and delivery. Output: a 30-40min episode, BTS series, social clips, and photography sets.</div><div class="proj-meta"><span class="pmeta">10-person crew</span><span class="pmeta">Multi-cam studio</span><span class="pmeta">5 deliverables</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Brand Campaign &middot; Actors &middot; Full Production</div><div class="proj-name">Stajvelo Bicycle Brand Campaign</div><div class="proj-detail">Full creative and campaign production for a premium cycling brand &mdash; concept, script, and production design from scratch. Directed a cast of 10 actors with 5 crew and 5 ops across cycling routes, waterfront, and studio in a single production arc.</div><div class="proj-meta"><span class="pmeta">10 actors &middot; 5 crew &middot; 5 ops</span><span class="pmeta">Multi-location</span><span class="pmeta">Brand campaign</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Adventure &middot; Action &middot; Complex Logistics</div><div class="proj-name">Beno Desert Experience</div><div class="proj-detail">Full creative concept, script, and shoot design for large-scale desert productions. Led up to 12 actors, 6 crew, and 8 ops in remote terrain, running cinema line cameras, Insta360, GoPros, and drone in parallel.</div><div class="proj-meta"><span class="pmeta">12 actors &middot; 6 crew &middot; 8 ops</span><span class="pmeta">Cinema cameras &middot; Drone</span><span class="pmeta">Full safety planning</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Docu-Series &middot; Interviews &middot; Human Stories</div><div class="proj-name">Beno Team Docu-Series</div><div class="proj-detail">Conceived and directed an ongoing documentary series about the people behind Beno, not just the assets. Wrote interview frameworks and cinematic setups to humanise the brand &mdash; giving its team a voice, a face, and a story.</div><div class="proj-meta"><span class="pmeta">Scripted concepts</span><span class="pmeta">Interview direction</span><span class="pmeta">Ongoing series</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Hero Films &middot; Commercial Style &middot; Script to Screen</div><div class="proj-name">Hero Campaigns Across Categories</div><div class="proj-detail">Scripted and shot-listed in commercial film style across categories, each with its own visual language and pacing. Directed every phase, concept to delivery &mdash; engineered for both brand elevation and direct conversion.</div><div class="proj-meta"><span class="pmeta">Commercial approach</span><span class="pmeta">Script to screen</span><span class="pmeta">Multi-category</span></div></div>
+      <div class="proj-card"><div class="proj-tag">Social Strategy &middot; Multi-Platform &middot; KPI Targets</div><div class="proj-name">Social Media Coverage &amp; Metrics</div><div class="proj-detail">Designed and supervised a multi-platform social operation across Instagram, TikTok, LinkedIn, and YouTube. Defined formats, cadence, and per-platform targets, with shoots structured to capture multiple formats in a single day.</div><div class="proj-meta"><span class="pmeta">4 platforms</span><span class="pmeta">Multi-format per shoot</span><span class="pmeta">KPI targets set</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="wrap">
+    <div class="quote-inner reveal">
+      <div class="quote-mark">"</div>
+      <div>
+        <p class="quote-text">Every project was approached as <em>a film, not content.</em> The brief exists to protect the idea. The system exists to protect the quality.</p>
+        <div class="quote-attr">Bechara El Khoury &middot; Creative Director &middot; Head of Media &middot; Beno, Dubai</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCALE -->
+<section id="scale">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Scale &amp; Output</p>
+      <h2 class="sec-title">Numbers that<br><span class="gold">speak clearly.</span></h2>
+    </div>
+    <div class="metrics-grid reveal">
+      <div class="metric-block accent"><div class="metric-big"><span class="t" data-count="107">0</span></div><div class="metric-title">Productions delivered in under a year</div><div class="metric-desc">Shoots, edits, photo packages, campaigns, series, podcasts, brand films. Every content category covered. <b>All produced, directed, and supervised in-house</b> with zero outsourced creative direction.</div></div>
+      <div class="metric-block"><div class="metric-big"><span class="g" data-count="28">0</span></div><div class="metric-title">Shoots led as Head of Media, Director &amp; DOP</div><div class="metric-desc">Full-day, multi-day, night shoots, studio and field productions. <b>Dubai, Fujairah, Abu Dhabi, desert, waterfront, mountain terrain.</b> Camera operator, director, and creative lead on every shoot.</div></div>
+      <div class="metric-block"><div class="metric-big"><span class="g" data-count="70">0</span><span class="sfx g">+</span></div><div class="metric-title">Video edits directed &amp; supervised to delivery</div><div class="metric-desc">Every edit reviewed through Frame.io with structured creative feedback. <b>Color grading, VO direction, music selection, sound design</b> all personally supervised.</div></div>
+      <div class="metric-block"><div class="metric-big"><span class="t" data-count="10">0</span></div><div class="metric-title">Major campaigns owned end-to-end</div><div class="metric-desc">Velvet Velocity Rally, Cars &amp; Cigars, Beno Winners Cup, Stajvelo, Beno x WEB3 Podcast and more. <b>Each a complete production cycle</b>: concept, script, shoot, post-production, stakeholder management, metrics review.</div></div>
+    </div>
+    <div class="viz-wrap reveal">
+      <div class="viz-card">
+        <div class="viz-head"><span class="viz-eyebrow">Production mix</span><span class="viz-sub">107 productions, grouped by world</span></div>
+        <div class="donut-row">
+          <svg class="donut" viewBox="0 0 200 200">
+            <g transform="rotate(-90 100 100)">
+              <circle class="track" cx="100" cy="100" r="80"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#DCC089" style="--da:124.4 378.3" stroke-dashoffset="0"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#00C2D4" style="--da:114.5 388.2" stroke-dashoffset="-124.4"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#C2A06A" style="--da:89.6 413.1" stroke-dashoffset="-238.9"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#0794B8" style="--da:59.7 443.0" stroke-dashoffset="-328.5"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#837049" style="--da:59.7 443.0" stroke-dashoffset="-388.2"/>
+              <circle class="seg" cx="100" cy="100" r="80" stroke="#5C616A" style="--da:54.8 447.9" stroke-dashoffset="-447.9"/>
+            </g>
+            <text class="donut-center-num" x="100" y="100" text-anchor="middle" dominant-baseline="middle">107</text>
+            <text class="donut-center-lbl" x="100" y="122" text-anchor="middle">PRODUCTIONS</text>
+          </svg>
+          <ul class="legend">
+            <li><span class="dot" style="background:#DCC089"></span><span class="lg-name">Automotive &amp; Rally</span><span class="lg-val">25</span><span class="lg-pct">25%</span></li>
+            <li><span class="dot" style="background:#00C2D4"></span><span class="lg-name">Events &amp; Hospitality</span><span class="lg-val">23</span><span class="lg-pct">23%</span></li>
+            <li><span class="dot" style="background:#C2A06A"></span><span class="lg-name">Marine &amp; Water</span><span class="lg-val">18</span><span class="lg-pct">18%</span></li>
+            <li><span class="dot" style="background:#0794B8"></span><span class="lg-name">Seasonal Campaigns</span><span class="lg-val">12</span><span class="lg-pct">12%</span></li>
+            <li><span class="dot" style="background:#837049"></span><span class="lg-name">Desert &amp; Adventure</span><span class="lg-val">12</span><span class="lg-pct">12%</span></li>
+            <li><span class="dot" style="background:#5C616A"></span><span class="lg-name">Brand &amp; Long-form</span><span class="lg-val">11</span><span class="lg-pct">11%</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="viz-card viz-bars">
+        <div class="viz-head"><span class="viz-eyebrow">By domain</span><span class="viz-sub">Productions per content vertical</span></div>
+        <div class="bars">
+          <div class="bar-row hl"><div class="bar-lbl">Luxury Cars</div><div class="bar-track"><div class="bar-fill" style="--w:100%"></div></div><div class="bar-val">15</div></div>
+          <div class="bar-row"><div class="bar-lbl">Yachts &amp; Marine</div><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div><div class="bar-val">12</div></div>
+          <div class="bar-row"><div class="bar-lbl">Seasonal</div><div class="bar-track"><div class="bar-fill" style="--w:80%"></div></div><div class="bar-val">12</div></div>
+          <div class="bar-row"><div class="bar-lbl">Rallies</div><div class="bar-track"><div class="bar-fill" style="--w:67%"></div></div><div class="bar-val">10</div></div>
+          <div class="bar-row"><div class="bar-lbl">Luxury Events</div><div class="bar-track"><div class="bar-fill" style="--w:67%"></div></div><div class="bar-val">10</div></div>
+          <div class="bar-row"><div class="bar-lbl">Collaborations</div><div class="bar-track"><div class="bar-fill" style="--w:53%"></div></div><div class="bar-val">8</div></div>
+          <div class="bar-row"><div class="bar-lbl">Desert</div><div class="bar-track"><div class="bar-fill" style="--w:53%"></div></div><div class="bar-val">8</div></div>
+          <div class="bar-row"><div class="bar-lbl">Brand &amp; Display</div><div class="bar-track"><div class="bar-fill" style="--w:40%"></div></div><div class="bar-val">6</div></div>
+          <div class="bar-row"><div class="bar-lbl">Water Sports</div><div class="bar-track"><div class="bar-fill" style="--w:40%"></div></div><div class="bar-val">6</div></div>
+          <div class="bar-row"><div class="bar-lbl">Hospitality</div><div class="bar-track"><div class="bar-fill" style="--w:33%"></div></div><div class="bar-val">5</div></div>
+          <div class="bar-row"><div class="bar-lbl">Podcast</div><div class="bar-track"><div class="bar-fill" style="--w:33%"></div></div><div class="bar-val">5</div></div>
+          <div class="bar-row"><div class="bar-lbl">Cycling</div><div class="bar-track"><div class="bar-fill" style="--w:27%"></div></div><div class="bar-val">4</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Department Systems</p>
+      <h2 class="sec-title">Built to scale.<br><span class="gold">From nothing.</span></h2>
+      <p class="sec-intro">Before December 2025, none of these systems existed. Every workflow, document, and process was identified, designed, and deployed in the first 90 days &middot; without pausing production.</p>
+    </div>
+    <div class="ops-grid reveal">
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><div class="ops-title">Operating Infrastructure</div><div class="ops-desc">Full department built from zero. Every operational document designed and deployed within 30 days of founding.</div><ul class="ops-list"><li>Media Team Operating Manual v1.0</li><li>Shoot Brief Intake Form</li><li>Equipment Checkout &amp; Return System</li><li>Post-Shoot Report Protocol</li><li>Communication channel structure</li></ul></div>
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg></div><div class="ops-title">Creative Control Systems</div><div class="ops-desc">Single-owner editing hierarchy. Structured review windows. Frame.io as the sole feedback channel. No parallel inputs.</div><ul class="ops-list"><li>Editing Review Hierarchy</li><li>Frame.io review-only policy</li><li>Editor brief format</li><li>Visual identity framework v1</li><li>LUT &amp; color direction guidelines</li></ul></div>
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M7.5 14.5l3.5-4 3 2.5L21 6.5"/></svg></div><div class="ops-title">Measurement &amp; Reporting</div><div class="ops-desc">First performance tracking system the department ever had. Weekly scores, monthly trends, quarterly OKRs. Ready for leadership reporting.</div><ul class="ops-list"><li>OKR Framework &middot; 3 objectives / 12 KRs</li><li>25+ KPI tracking dashboard</li><li>Weekly operational scoreboard</li><li>Phase-based department roadmap</li><li>Monthly scorecard reports</li></ul></div>
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M3.5 9h17M8 3v3M16 3v3"/></svg></div><div class="ops-title">Production Planning</div><div class="ops-desc">Timelines, workload references, and capacity planning that made delivery expectations visible and defensible to leadership.</div><ul class="ops-list"><li>Production Timelines Reference doc</li><li>Trello-based project tracking</li><li>Shot list &amp; call sheet system</li><li>107-project Master Production Log</li><li>Content category framework (8 types)</li></ul></div>
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15 13.5a4.5 4.5 0 0 1 5.5 4.5"/></svg></div><div class="ops-title">Talent &amp; Team</div><div class="ops-desc">Built hiring criteria, screening processes, and onboarding systems for all media roles. Team grew from 1 to 7 at peak.</div><ul class="ops-list"><li>Editor screening &amp; onboarding (3 hires)</li><li>Videographer role definition</li><li>SMM &amp; Photographer JDs</li><li>On-set role clarity framework</li><li>Shooting guidelines &amp; dress code</li></ul></div>
+      <div class="ops-card"><div class="ops-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><div class="ops-title">Strategy &amp; Vision</div><div class="ops-desc">3-phase roadmap from Foundation to Scale to Full Creative Capability. Content strategy and visual identity designed for long-term brand equity.</div><ul class="ops-list"><li>3-Phase dept development roadmap</li><li>8 content category framework</li><li>AI integration planning</li><li>Brand manifesto creation</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Creative Philosophy</p>
+      <h2 class="sec-title">The approach behind<br><span class="gold">every production.</span></h2>
+    </div>
+    <div class="approach-grid reveal">
+      <div class="approach-card"><div class="approach-num">01</div><div class="approach-title">Direction over execution</div><div class="approach-desc">Every production starts with a clear intention &middot; a feeling, a message, a visual idea. <em>The brief exists to protect the concept.</em> Execution without direction is just content. Direction with structure is filmmaking &middot; regardless of the format length.</div></div>
+      <div class="approach-card"><div class="approach-num">02</div><div class="approach-title">Cinematic standard across formats</div><div class="approach-desc">Whether it's a 7-second Instagram Story or a 40-minute podcast &middot; the same principles apply. <em>Pacing. Composition. Light. Sound.</em> The format changes. The care doesn't. Luxury content demands cinematic thinking, not just fast delivery.</div></div>
+      <div class="approach-card"><div class="approach-num">03</div><div class="approach-title">Structure enables creativity</div><div class="approach-desc">Systems aren't bureaucracy &middot; they're the conditions for better work. <em>A clear brief means the editor isn't guessing. A review window means the creative director isn't firefighting.</em> Every system built at Beno existed to free the team to focus on quality.</div></div>
+      <div class="approach-card"><div class="approach-num">04</div><div class="approach-title">Unity of standard</div><div class="approach-desc">Cars at midnight. Yachts at golden hour. Buggies in the dunes. Bikes on the waterfront. Podcast in a studio. Each world has its own visual language &middot; <em>the head of media's job is to understand all of them</em> and hold them to the same standard.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-line"></div>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Bechara <span>El Khoury</span></div>
+        <div class="footer-role">Head of Media &middot; Creative Director &middot; Cinematographer</div>
+      </div>
+      <div class="footer-meta">
+        <p><strong>Based in:</strong> Dubai, UAE</p>
+        <p><strong>Experience:</strong> 16+ years &middot; 30+ countries</p>
+        <p style="margin-top:12px;"><a href="index.html" style="color:var(--gold);font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;">&larr; Back to Portfolio</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var prog=document.querySelector('.scroll-prog');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  function animCount(el){var target=parseFloat(el.dataset.count),dur=1500,start=performance.now();function tick(now){var t=Math.min((now-start)/dur,1);var e=1-Math.pow(1-t,3);el.textContent=Math.round(target*e).toLocaleString();if(t<1)requestAnimationFrame(tick);else el.textContent=target.toLocaleString();}requestAnimationFrame(tick);}
+  var cIO=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){if(en.target.dataset.count)animCount(en.target);cIO.unobserve(en.target);}});},{threshold:0.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){cIO.observe(el);});
+
+  var rIO=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');rIO.unobserve(en.target);}});},{threshold:0.1});
+  document.querySelectorAll('.reveal,.fade-up,.viz-bars,.donut-row').forEach(function(el){rIO.observe(el);});
+
+  document.querySelectorAll('.bar-fill').forEach(function(b){
+    var bIO=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.style.transform='scaleX(1)';bIO.unobserve(en.target);}});},{threshold:0.5});
+    bIO.observe(b);
+  });
+
+  window.scrollReel=function(dir){var rail=document.getElementById('reelRail');var card=rail.querySelector('.reel-card');var step=card?card.offsetWidth+22:290;rail.scrollBy({left:dir*step,behavior:'smooth'});};
+})();
+</script>
+</body>
+</html>
