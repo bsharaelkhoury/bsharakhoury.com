@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bechara El Khoury - Director - Cinematographer - Head of Media</title>
+<meta name="description" content="Bechara El Khoury - Director, Cinematographer and Head of Media. 16+ years across 30+ countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#080808;--deep:#0f0f0f;--surface:#141414;--border:#1e1e1e;
+  --muted:#3a3a3a;--subtle:#686868;--text:#b8b8b8;--light:#e0e0e0;
+  --white:#f0f0f0;--gold:#c9a96e;--gold-dim:rgba(201,169,110,0.12);
+  --fd:"Bebas Neue",sans-serif;--fb:"Inter",sans-serif;--fm:"Courier Prime",monospace;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--text);font-family:var(--fb);font-weight:300;line-height:1.6;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-track{background:var(--black);}
+::-webkit-scrollbar-thumb{background:var(--gold);}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;background:rgba(8,8,8,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-name{font-family:var(--fd);font-size:18px;letter-spacing:0.16em;color:var(--white);flex-shrink:0;}
+.nav-links{display:flex;gap:28px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{font-family:var(--fm);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text);transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:18px;flex-shrink:0;}
+.nav-social{display:flex;gap:14px;align-items:center;}
+.nav-social a{color:var(--subtle);transition:color 0.2s;display:flex;align-items:center;}
+.nav-social a:hover{color:var(--gold);}
+.nav-social svg{width:16px;height:16px;fill:currentColor;}
+.nav-divider{width:1px;height:18px;background:var(--border);}
+.nav-contact{font-family:var(--fm);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:9px 20px;transition:opacity 0.2s;border:none;white-space:nowrap;}
+.nav-contact:hover{opacity:0.8;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;flex-shrink:0;}
+.nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:99;background:rgba(8,8,8,0.99);flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:var(--fd);font-size:40px;letter-spacing:0.08em;color:var(--white);transition:color 0.2s;}
+.mobile-menu a:hover{color:var(--gold);}
+.mob-social{display:flex;gap:24px;margin-top:8px;}
+.mob-social a{color:var(--subtle);}
+.mob-social svg{width:20px;height:20px;fill:currentColor;}
+.mob-close{position:absolute;top:22px;right:28px;background:none;border:none;color:var(--subtle);font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;}
+
+/* HERO */
+#hero{position:relative;height:100vh;min-height:600px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
+.hero-reel{position:absolute;inset:0;z-index:0;background:var(--black);}
+.hero-reel iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;pointer-events:none;border:none;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,8,0.25) 0%,rgba(8,8,8,0.1) 30%,rgba(8,8,8,0.65) 68%,rgba(8,8,8,1) 100%);z-index:1;}
+.hero-content{position:relative;z-index:2;padding:0 48px 56px;}
+.hero-eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.hero-name{font-family:var(--fd);font-size:clamp(60px,10vw,148px);line-height:0.9;color:var(--white);letter-spacing:0.025em;}
+.hero-tagline{margin-top:24px;font-family:var(--fm);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--subtle);}
+.hero-scroll-ind{position:absolute;bottom:52px;right:48px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--fm);font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);}
+.hero-scroll-ind::after{content:"";width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2.2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
+
+/* SHARED */
+.divider{width:100%;height:1px;background:var(--border);}
+.sec-eye{font-family:var(--fm);font-size:11px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.sec-head{font-family:var(--fd);font-size:clamp(52px,7vw,96px);color:var(--white);line-height:0.93;letter-spacing:0.02em;margin-bottom:52px;}
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade.in{opacity:1;transform:translateY(0);}
+
+/* FILMMAKING */
+#filmmaking{padding:96px 48px;background:var(--black);}
+.film-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:40px;flex-wrap:wrap;}
+.film-header-right{font-size:14px;color:var(--subtle);line-height:1.8;max-width:340px;}
+.film-cat-row{border-top:1px solid var(--border);}
+.film-cat-row:last-child{border-bottom:1px solid var(--border);}
+.film-cat-header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;cursor:pointer;user-select:none;}
+.film-cat-header:hover .film-cat-name{color:var(--gold);}
+.film-cat-left{display:flex;align-items:center;gap:28px;}
+.film-cat-num{font-family:var(--fm);font-size:11px;letter-spacing:0.18em;color:var(--muted);min-width:28px;}
+.film-cat-name{font-family:var(--fd);font-size:clamp(32px,4vw,54px);color:var(--white);letter-spacing:0.04em;transition:color 0.25s;}
+.film-cat-meta{display:flex;align-items:center;gap:20px;}
+.film-cat-count{font-family:var(--fm);font-size:11px;letter-spacing:0.14em;color:var(--muted);}
+.film-cat-arrow{font-family:var(--fm);font-size:16px;color:var(--gold);transition:transform 0.35s;display:inline-block;}
+.film-cat-row.open .film-cat-arrow{transform:rotate(90deg);}
+.film-cat-videos{overflow:hidden;max-height:0;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1);}
+.film-cat-row.open .film-cat-videos{max-height:420px;}
+
+/* SCROLL TRACK WRAPPER with arrows */
+.scroll-wrapper{position:relative;}
+.scroll-arrow{position:absolute;top:50%;transform:translateY(-60%);z-index:10;background:rgba(8,8,8,0.9);border:2px solid var(--gold);color:var(--gold);width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:22px;transition:background 0.2s,opacity 0.2s;opacity:0.85;}
+.scroll-arrow:hover{background:var(--gold);color:var(--black);}
+.scroll-arrow.left{left:0;}
+.scroll-arrow.right{right:0;}
+.scroll-wrapper:hover .scroll-arrow{opacity:1;}
+.scroll-arrow.hidden{opacity:0!important;pointer-events:none;}
+
+.film-scroll-track{display:flex;gap:14px;overflow-x:auto;padding-bottom:32px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.film-scroll-track::-webkit-scrollbar{display:none;}
+
+.film-thumb{flex:0 0 280px;position:relative;background:var(--surface);overflow:hidden;border:1px solid var(--border);transition:border-color 0.3s;cursor:pointer;}
+.film-thumb:hover{border-color:var(--gold);}
+.film-thumb-img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:brightness(0.7) saturate(0.85);transition:transform 0.55s ease,filter 0.4s;display:block;background:var(--surface);}
+.film-thumb:hover .film-thumb-img{transform:scale(1.06);filter:brightness(0.92) saturate(1.1);}
+.film-thumb-info{padding:10px 12px;}
+.film-thumb-title{font-family:var(--fb);font-size:11px;font-weight:500;color:var(--light);margin-bottom:3px;line-height:1.3;}
+.film-thumb-sub{font-family:var(--fm);font-size:9px;letter-spacing:0.1em;color:var(--muted);}
+.film-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%) scale(0.8);width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;background:rgba(8,8,8,0.45);opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;}
+.film-play-btn svg{width:15px;height:15px;fill:white;margin-left:2px;}
+.film-thumb:hover .film-play-btn{opacity:1;transform:translate(-50%,-60%) scale(1);}
+.series-badge{position:absolute;top:8px;right:8px;font-family:var(--fm);font-size:8px;letter-spacing:0.18em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:3px 7px;}
+
+/* VIDEO MODAL */
+.vmodal{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.vmodal.open{opacity:1;pointer-events:all;}
+.vmodal-box{width:92vw;max-width:1100px;aspect-ratio:16/9;position:relative;}
+.vmodal-box iframe{width:100%;height:100%;border:none;}
+.vmodal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:var(--white);font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;}
+.vmodal-close:hover{color:var(--gold);}
+
+/* SERIES OVERLAY */
+.series-overlay{position:fixed;inset:0;z-index:250;background:var(--black);opacity:0;pointer-events:none;transition:opacity 0.35s;display:flex;flex-direction:column;overflow:hidden;}
+.series-overlay.open{opacity:1;pointer-events:all;}
+.series-topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);flex-shrink:0;}
+.series-label{font-family:var(--fm);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.series-name{font-family:var(--fd);font-size:32px;letter-spacing:0.06em;color:var(--white);}
+.series-close-btn{background:none;border:1px solid var(--border);padding:8px 16px;font-family:var(--fm);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text);transition:all 0.2s;}
+.series-close-btn:hover{border-color:var(--white);color:var(--white);}
+.series-body{flex:1;overflow-y:auto;padding:40px 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-content:start;}
+.ep-card{background:var(--surface);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:border-color 0.3s;}
+.ep-card:hover{border-color:var(--gold);}
+.ep-thumb-wrap{position:relative;width:100%;padding-top:56.25%;overflow:hidden;background:var(--surface);}
+.ep-thumb-wrap img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
+.ep-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);}
+.ep-thumb-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(0.72);transition:transform 0.5s,filter 0.4s;}
+.ep-card:hover .ep-thumb-wrap img{filter:brightness(0.9);}
+.ep-play{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;background:rgba(8,8,8,0.4);opacity:0;transition:opacity 0.3s,transform 0.3s;}
+.ep-play svg{width:14px;height:14px;fill:white;margin-left:2px;}
+.ep-card:hover .ep-play{opacity:1;transform:translate(-50%,-50%) scale(1);}
+.ep-info{padding:14px 16px;}
+.ep-num{font-family:var(--fm);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.ep-title{font-size:13px;font-weight:500;color:var(--light);line-height:1.4;}
+
+/* PHOTOGRAPHY */
+#photography{padding:96px 48px;background:var(--deep);}
+.photo-cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
+.photo-cat-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/10;background:var(--surface);}
+.photo-cat-card img{width:100%;height:100%;object-fit:cover;filter:brightness(0.5) saturate(0.75);transition:transform 0.65s ease,filter 0.5s;}
+.photo-cat-card:hover img{transform:scale(1.08);filter:brightness(0.75) saturate(1.1);}
+.photo-cat-over{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px;background:linear-gradient(to top,rgba(8,8,8,0.9) 0%,rgba(8,8,8,0.1) 60%,transparent 100%);}
+.photo-cat-label{font-family:var(--fd);font-size:clamp(22px,2.5vw,34px);color:var(--white);letter-spacing:0.06em;line-height:1;}
+.photo-cat-sub{font-family:var(--fm);font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-top:6px;opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s;}
+.photo-cat-card:hover .photo-cat-sub{opacity:1;transform:translateY(0);}
+
+/* ALBUM VIEWER */
+.album-overlay{position:fixed;inset:0;z-index:200;background:var(--black);opacity:0;pointer-events:none;transition:opacity 0.3s;display:flex;flex-direction:column;}
+.album-overlay.open{opacity:1;pointer-events:all;}
+.album-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid var(--border);flex-shrink:0;flex-wrap:wrap;gap:12px;}
+.album-bar-left{display:flex;align-items:center;gap:16px;}
+.album-cat-label{font-family:var(--fd);font-size:26px;letter-spacing:0.08em;color:var(--white);}
+.album-photo-count{font-family:var(--fm);font-size:10px;letter-spacing:0.18em;color:var(--muted);}
+.album-bar-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.lay-btn{background:none;border:1px solid var(--border);padding:8px 14px;font-family:var(--fm);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);transition:all 0.2s;}
+.lay-btn.active,.lay-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,0.08);}
+.album-close-btn{background:none;border:1px solid var(--border);padding:8px 14px;font-family:var(--fm);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text);transition:all 0.2s;}
+.album-close-btn:hover{border-color:var(--white);color:var(--white);}
+.album-body{flex:1;overflow-y:auto;padding:28px 48px;}
+.alb-grid{columns:3;column-gap:4px;}
+.alb-grid-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;cursor:zoom-in;}
+.alb-grid-item img{width:100%;display:block;filter:brightness(0.82);opacity:0;transition:opacity 0.5s ease,transform 0.45s,filter 0.35s;}
+.alb-grid-item img.loaded{opacity:1;}
+.alb-grid-item:hover img{transform:scale(1.03);filter:brightness(1);}
+.alb-carousel{display:flex;flex-direction:column;}
+.car-stage-fixed{width:100%;max-width:960px;margin:0 auto;height:62vh;display:flex;align-items:center;justify-content:center;background:transparent;}
+.car-stage-fixed img{max-width:100%;max-height:100%;object-fit:contain;display:block;transition:opacity 0.25s;}
+.car-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:20px;flex-shrink:0;}
+.car-arrow{background:none;border:1px solid var(--border);width:46px;height:46px;color:var(--white);font-size:20px;transition:border-color 0.2s,color 0.2s;flex-shrink:0;}
+.car-arrow:hover{border-color:var(--gold);color:var(--gold);}
+.car-count{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;color:var(--muted);min-width:60px;text-align:center;}
+.car-strip{display:flex;gap:5px;overflow-x:auto;padding:16px 0 4px;max-width:960px;width:100%;margin:0 auto;-webkit-overflow-scrolling:touch;flex-shrink:0;}
+.car-strip img{height:52px;width:78px;object-fit:cover;cursor:pointer;opacity:0.4;flex-shrink:0;transition:opacity 0.2s;border:1px solid transparent;}
+.car-strip img.active{opacity:1;border-color:var(--gold);}
+.alb-full{display:flex;flex-direction:column;gap:4px;}
+.alb-full-item img{width:100%;display:block;max-height:96vh;object-fit:contain;}
+.alb-lb{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,0.98);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s;}
+.alb-lb.open{opacity:1;pointer-events:all;}
+.alb-lb img{max-width:94vw;max-height:94vh;object-fit:contain;}
+.alb-lb-x{position:absolute;top:22px;right:32px;background:none;border:none;color:var(--white);font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;}
+.alb-lb-x:hover{color:var(--gold);}
+.alb-empty{font-family:var(--fm);font-size:11px;letter-spacing:0.2em;color:var(--muted);text-align:center;margin-top:80px;text-transform:uppercase;}
+
+/* HEAD OF MEDIA */
+#headofmedia{padding:96px 48px;background:var(--black);}
+.hom-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.hom-statement{font-size:15px;color:var(--text);line-height:1.85;margin-bottom:40px;}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px;}
+.stat-cell{background:var(--black);padding:28px 24px;}
+.stat-n{font-family:var(--fd);font-size:52px;color:var(--gold);line-height:1;letter-spacing:0.02em;}
+.stat-l{font-family:var(--fm);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--light);margin-top:8px;font-weight:400;}
+.hom-report-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fm);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:12px 24px;border:none;transition:opacity 0.2s;cursor:pointer;}
+.hom-report-btn:hover{opacity:0.8;}
+.hom-highlights-title{font-family:var(--fd);font-size:32px;letter-spacing:0.06em;color:var(--white);margin-bottom:24px;}
+.highlight-item{padding:22px 0;border-bottom:1px solid var(--border);}
+.highlight-item:first-child{border-top:1px solid var(--border);}
+.hi-title{font-size:14px;font-weight:500;color:var(--white);margin-bottom:8px;line-height:1.4;letter-spacing:0.01em;}
+.hi-desc{font-size:13px;color:var(--light);line-height:1.75;opacity:0.88;}
+
+/* ABOUT */
+#about{padding:96px 48px;background:var(--surface);}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start;grid-auto-rows:auto;}
+.about-img-col{position:sticky;top:84px;align-self:start;}
+.about-img-wrap{overflow:hidden;background:var(--surface);min-height:300px;}
+.about-img-wrap img{width:100%;display:block;filter:brightness(0.92);}
+.about-img-caption{margin-top:14px;font-family:var(--fm);font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);}
+.about-bio-text{font-size:15px;color:var(--text);line-height:1.88;margin-bottom:36px;}
+.about-bio-text strong{color:var(--white);font-weight:500;}
+.about-divider{width:100%;height:1px;background:var(--border);margin-bottom:32px;}
+.about-beyond-label{font-family:var(--fm);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.about-beyond-text{font-size:14px;color:var(--text);line-height:1.85;}
+.about-beyond-text strong{color:var(--white);font-weight:500;}
+
+/* CONTACT */
+#contact{padding:100px 48px;background:var(--black);text-align:center;}
+.contact-heading{font-family:var(--fd);font-size:clamp(64px,10vw,140px);color:var(--white);line-height:0.88;letter-spacing:0.02em;margin-bottom:48px;}
+.contact-info{display:flex;flex-direction:column;gap:12px;margin-bottom:48px;}
+.contact-email{font-family:var(--fm);font-size:15px;letter-spacing:0.14em;color:var(--gold);transition:opacity 0.2s;}
+.contact-email:hover{opacity:0.7;}
+.contact-phone{font-family:var(--fm);font-size:13px;letter-spacing:0.14em;color:var(--text);}
+.contact-loc{font-family:var(--fm);font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--muted);}
+.contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.contact-pill{display:flex;align-items:center;gap:10px;font-family:var(--fm);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text);border:1px solid var(--border);padding:12px 26px;transition:all 0.25s;}
+.contact-pill:hover{border-color:var(--gold);color:var(--gold);}
+.contact-pill svg{width:15px;height:15px;fill:currentColor;flex-shrink:0;}
+
+/* FOOTER */
+footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.foot-l{font-family:var(--fm);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
+.foot-r{font-family:var(--fm);font-size:10px;letter-spacing:0.1em;color:var(--border);}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:0 20px;height:56px;}
+  .nav-links,.nav-social,.nav-divider,.nav-contact{display:none;}
+  .nav-hamburger{display:flex;}
+  #hero .hero-content{padding:0 24px 44px;}
+  .hero-name{font-size:clamp(52px,14vw,80px);}
+  .hero-scroll-ind{display:none;}
+  #filmmaking,#photography,#headofmedia,#about,#contact{padding:64px 24px;}
+  .film-header{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:40px;}
+  .film-cat-name{font-size:clamp(26px,7vw,38px);}
+  .film-thumb{flex:0 0 230px;}
+  .film-cat-row.open .film-cat-videos{max-height:340px;}
+  .photo-cats-grid{grid-template-columns:repeat(2,1fr);}
+  .album-bar{padding:14px 20px;}
+  .album-body{padding:16px 20px;}
+  .alb-grid{columns:2;}
+  .car-stage-fixed{height:45vw;}
+  .hom-grid{grid-template-columns:1fr;gap:48px;}
+  .about-grid{grid-template-columns:1fr;gap:36px;}
+  .about-img-col{position:static;}
+  footer{padding:20px 24px;text-align:center;justify-content:center;}
+  .contact-heading{font-size:clamp(56px,16vw,90px);}
+  .series-topbar{padding:14px 20px;}
+  .series-body{padding:16px;grid-template-columns:1fr 1fr;gap:12px;}
+}
+@media(max-width:480px){
+  .photo-cats-grid{grid-template-columns:1fr 1fr;}
+  .alb-grid{columns:1;}
+  .lay-btn,.album-close-btn{padding:7px 10px;font-size:9px;}
+  .series-body{grid-template-columns:1fr;gap:10px;padding:12px;}
+  .series-name{font-size:22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-name">Bechara El Khoury</a>
+  <ul class="nav-links">
+    <li><a href="#filmmaking">Work</a></li>
+    <li><a href="#photography">Photography</a></li>
+    <li><a href="#headofmedia">Head of Media</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/bshara.in.filmmaking/" target="_blank" title="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
+    <div class="nav-divider"></div>
+    <a href="#contact" class="nav-contact">Contact</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mob-close" id="mobClose">X Close</button>
+  <a href="#filmmaking" class="mob-link">Work</a>
+  <a href="#photography" class="mob-link">Photography</a>
+  <a href="#headofmedia" class="mob-link">Head of Media</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <div class="mob-social">
+    <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://www.instagram.com/bshara.in.filmmaking/" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-reel">
+    <iframe src="https://player.vimeo.com/video/1045590761?background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Director &middot; Cinematographer &middot; Head of Media</p>
+    <h1 class="hero-name">BECHARA<br>EL KHOURY</h1>
+    <p class="hero-tagline">16+ years &nbsp;&middot;&nbsp; 30+ countries &nbsp;&middot;&nbsp; Dubai, UAE</p>
+  </div>
+  <div class="hero-scroll-ind">Scroll</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FILMMAKING -->
+<section id="filmmaking">
+  <div class="film-header fade">
+    <div>
+      <p class="sec-eye">Selected Work</p>
+      <h2 class="sec-head">DIRECTOR &amp;<br>CINEMATOGRAPHER</h2>
+    </div>
+    <p class="film-header-right">Narrative, commercial, documentary and music film across 16 years and 30+ countries. Every frame built from instinct and intention.</p>
+  </div>
+
+  <div class="film-categories fade">
+
+    <!-- 01 STORYTELLING -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">01</span><span class="film-cat-name">STORYTELLING</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">4 films</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/478397818?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/478397818.jpg" alt="Ajman Tourism">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Ajman Tourism</div><div class="film-thumb-sub">Vimeo &middot; Storytelling</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/543505247?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/543505247.jpg" alt="Hugo Boss">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Hugo Boss - Be Your Own Man</div><div class="film-thumb-sub">Vimeo &middot; Storytelling</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/119242627?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/119242627.jpg" alt="Love Letters to Dubai">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Love Letters to Dubai</div><div class="film-thumb-sub">Vimeo &middot; Narrative</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/927178906?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/927178906.jpg" alt="Red Cross Lebanon">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Red Cross Lebanon</div><div class="film-thumb-sub">Vimeo &middot; Storytelling</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COMMERCIALS -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">02</span><span class="film-cat-name">COMMERCIALS</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">9 films</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/1207013651?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/1207013651.jpg" alt="Nescafe Alegria">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">NESCAFE ALEGRIA</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/766398965?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/766398965.jpg" alt="TikTok">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">TikTok Family Pairing</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/927180667?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/927180667.jpg" alt="CCAZ">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">CCAZ - The Family</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/935440204?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/935440204.jpg" alt="Food Central">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Food Central TVC - MAF</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/935439484?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/935439484.jpg" alt="Nestle Optifast">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Nestle - Optifast</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/935448912?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/935448912.jpg" alt="McDonalds App">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">McDonald's App</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/1207013892?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/1207013892.jpg" alt="MAF Share it Forward">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">MAF - Share It Forward</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+            <!-- NESCAFE ALEGRIA MINI SERIES -->
+            <div class="film-thumb series-thumb" data-series="nescafe">
+              <img class="film-thumb-img" src="https://vumbnail.com/274157276.jpg" alt="NESCAFE Alegria Series">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="series-badge">Series</div>
+              <div class="film-thumb-info"><div class="film-thumb-title">NESCAFE ALEGRIA - Mini Series</div><div class="film-thumb-sub">Vimeo &middot; 6 Episodes</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/935449114?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/935449114.jpg" alt="McDonalds App 2">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">McDonald's App 2</div><div class="film-thumb-sub">Vimeo &middot; Commercial</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 FASHION -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">03</span><span class="film-cat-name">FASHION</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">3 films</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/691551208?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/691551208.jpg" alt="Makeup Forever">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Makeup Forever</div><div class="film-thumb-sub">Vimeo &middot; Fashion</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/912189541?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/912189541.jpg" alt="Artist Rouge">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Artist Rouge</div><div class="film-thumb-sub">Vimeo &middot; Fashion</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/512142921?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/512142921.jpg" alt="Shopping Festival">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Shopping Festival</div><div class="film-thumb-sub">Vimeo &middot; Fashion</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 MUSIC VIDEOS -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">04</span><span class="film-cat-name">MUSIC VIDEOS</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">3 films</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://www.youtube.com/embed/TRwConZh3ls?autoplay=1">
+              <img class="film-thumb-img" src="https://img.youtube.com/vi/TRwConZh3ls/maxresdefault.jpg" alt="Jay Wud">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Jay Wud - Shine Your Light</div><div class="film-thumb-sub">YouTube &middot; Music</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://www.youtube.com/embed/9NnEPmJsDzM?autoplay=1">
+              <img class="film-thumb-img" src="https://img.youtube.com/vi/9NnEPmJsDzM/maxresdefault.jpg" alt="Hiba Mounzer">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Hiba Mounzer - Tarekni Lameen</div><div class="film-thumb-sub">YouTube &middot; Music</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://www.youtube.com/embed/lkDtBsKdBrA?autoplay=1">
+              <img class="film-thumb-img" src="https://img.youtube.com/vi/lkDtBsKdBrA/maxresdefault.jpg" alt="Gaya">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Gaya - The Boys Who Cried Love</div><div class="film-thumb-sub">YouTube &middot; Music</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 DOCUMENTARY -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">05</span><span class="film-cat-name">DOCUMENTARY</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">5 films + 3 series</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/803172719?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/803172719.jpg" alt="SnapChat">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">SnapChat</div><div class="film-thumb-sub">Vimeo &middot; Documentary</div></div>
+            </div>
+            <div class="film-thumb series-thumb" data-series="wajadtou">
+              <img class="film-thumb-img" src="https://img.youtube.com/vi/-vMeXaAx8Zw/maxresdefault.jpg" alt="Wajadtou Nafsi">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="series-badge">Series</div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Wajadtou Nafsi - Dubai TV</div><div class="film-thumb-sub">YouTube &middot; 5 Episodes</div></div>
+            </div>
+            <div class="film-thumb series-thumb" data-series="chevrolet">
+              <img class="film-thumb-img" src="https://img.youtube.com/vi/kiPiA7RxTGo/maxresdefault.jpg" alt="Chevrolet Silverado">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="series-badge">Series</div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Chevrolet Silverado - The Legend Of All Times</div><div class="film-thumb-sub">YouTube &middot; 5 Episodes</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/137423902?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/137423902.jpg" alt="D3 Fashion District">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">D3 Fashion District</div><div class="film-thumb-sub">Vimeo &middot; Documentary</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/274228735?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/274228735.jpg" alt="Teachers for Heroes">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Teachers for Heroes</div><div class="film-thumb-sub">Vimeo &middot; Documentary</div></div>
+            </div>
+            <div class="film-thumb series-thumb" data-series="mini">
+              <img class="film-thumb-img" src="https://vumbnail.com/93509614.jpg" alt="Mini Cooper Series">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="series-badge">Series</div>
+              <div class="film-thumb-info"><div class="film-thumb-title">Mini Cooper - The Original in Me</div><div class="film-thumb-sub">Vimeo &middot; 4 Episodes</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 SPORTS & TRAVEL -->
+    <div class="film-cat-row open">
+      <div class="film-cat-header">
+        <div class="film-cat-left"><span class="film-cat-num">06</span><span class="film-cat-name">SPORTS &amp; TRAVEL</span></div>
+        <div class="film-cat-meta"><span class="film-cat-count">3 films</span><span class="film-cat-arrow">&#x203A;</span></div>
+      </div>
+      <div class="film-cat-videos">
+        <div class="scroll-wrapper">
+          <button class="scroll-arrow left">&#x2039;</button>
+          <div class="film-scroll-track">
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/150919791?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/150919791.jpg" alt="The Fight">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">The Fight</div><div class="film-thumb-sub">Vimeo &middot; Sports</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/267034542?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/267034542.jpg" alt="Red Bull">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">RED BULL - Chasing Camel Trails</div><div class="film-thumb-sub">Vimeo &middot; Sports</div></div>
+            </div>
+            <div class="film-thumb" data-src="https://player.vimeo.com/video/228835480?autoplay=1&title=0&byline=0&portrait=0">
+              <img class="film-thumb-img" src="https://vumbnail.com/228835480.jpg" alt="Georgia">
+              <div class="film-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="film-thumb-info"><div class="film-thumb-title">A Glimpse of Georgia</div><div class="film-thumb-sub">Vimeo &middot; Travel</div></div>
+            </div>
+          </div>
+          <button class="scroll-arrow right">&#x203A;</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="vmodal" id="vmodal">
+  <div class="vmodal-box">
+    <button class="vmodal-close" id="vmodalClose">X Close</button>
+    <iframe id="vmodalFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- SERIES: NESCAFE ALEGRIA -->
+<div class="series-overlay" id="series-nescafe">
+  <div class="series-topbar">
+    <div><div class="series-label">Mini Series &middot; Commercial</div><div class="series-name">NESCAFE ALEGRIA</div></div>
+    <button class="series-close-btn">X Close</button>
+  </div>
+  <div class="series-body">
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157276?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157276.jpg" alt="Ep1" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 1</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157340?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157340.jpg" alt="Ep2" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 2</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157369?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157369.jpg" alt="Ep3" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 3</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157396?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157396.jpg" alt="Ep4" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 4</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157413?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157413.jpg" alt="Ep5" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 5</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/274157436?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/274157436.jpg" alt="Ep6" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 6</div><div class="ep-title">NESCAFE ALEGRIA</div></div></div>
+  </div>
+</div>
+
+<!-- SERIES: WAJADTOU NAFSI -->
+<div class="series-overlay" id="series-wajadtou">
+  <div class="series-topbar">
+    <div><div class="series-label">Documentary Series &middot; Dubai TV</div><div class="series-name">WAJADTOU NAFSI</div></div>
+    <button class="series-close-btn">X Close</button>
+  </div>
+  <div class="series-body">
+    <div class="ep-card" data-src="https://www.youtube.com/embed/-vMeXaAx8Zw?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/-vMeXaAx8Zw/maxresdefault.jpg" alt="Ep15" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 15</div><div class="ep-title">Full Episode 15</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/NY_a5K33auE?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/NY_a5K33auE/maxresdefault.jpg" alt="Ep6" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 6</div><div class="ep-title">Full Episode 6</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/GmVIHnIntyo?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/GmVIHnIntyo/maxresdefault.jpg" alt="Ep2" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 2</div><div class="ep-title">Full Episode 2</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/4FPBZ9AThMA?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/4FPBZ9AThMA/maxresdefault.jpg" alt="Ep8" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 8</div><div class="ep-title">Full Episode 8</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/32vpcboh2Ws?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/32vpcboh2Ws/maxresdefault.jpg" alt="Ep9" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 9</div><div class="ep-title">Full Episode 9</div></div></div>
+  </div>
+</div>
+
+<!-- SERIES: CHEVROLET -->
+<div class="series-overlay" id="series-chevrolet">
+  <div class="series-topbar">
+    <div><div class="series-label">Documentary Series &middot; Chevrolet</div><div class="series-name">THE LEGEND OF ALL TIMES</div></div>
+    <button class="series-close-btn">X Close</button>
+  </div>
+  <div class="series-body">
+    <div class="ep-card" data-src="https://www.youtube.com/embed/kiPiA7RxTGo?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/kiPiA7RxTGo/maxresdefault.jpg" alt="Ep1" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 1</div><div class="ep-title">Chevrolet Silverado</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/wMAUsri0wiE?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/wMAUsri0wiE/maxresdefault.jpg" alt="Ep2" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 2</div><div class="ep-title">Chevrolet Silverado</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/MjBERVRm_R4?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/MjBERVRm_R4/maxresdefault.jpg" alt="Ep3" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 3</div><div class="ep-title">Chevrolet Silverado</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/CB6mw9b_AAo?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/CB6mw9b_AAo/hqdefault.jpg" alt="Ep4" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 4</div><div class="ep-title">Chevrolet Silverado</div></div></div>
+    <div class="ep-card" data-src="https://www.youtube.com/embed/N9HP3snleOo?autoplay=1"><div class="ep-thumb-wrap"><img src="https://img.youtube.com/vi/N9HP3snleOo/maxresdefault.jpg" alt="Ep5" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 5</div><div class="ep-title">Chevrolet Silverado</div></div></div>
+  </div>
+</div>
+
+<!-- SERIES: MINI COOPER -->
+<div class="series-overlay" id="series-mini">
+  <div class="series-topbar">
+    <div><div class="series-label">Mini Cooper Series &middot; Vimeo</div><div class="series-name">THE ORIGINAL IN ME</div></div>
+    <button class="series-close-btn">X Close</button>
+  </div>
+  <div class="series-body">
+    <div class="ep-card" data-src="https://player.vimeo.com/video/93509614?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/93509614.jpg" alt="Lama" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 1</div><div class="ep-title">Lama</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/93509610?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/93509610.jpg" alt="Gaya" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 2</div><div class="ep-title">Gaya</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/93509607?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/93509607.jpg" alt="Aziz" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 3</div><div class="ep-title">Aziz</div></div></div>
+    <div class="ep-card" data-src="https://player.vimeo.com/video/93509618?autoplay=1&title=0&byline=0&portrait=0"><div class="ep-thumb-wrap"><img src="https://vumbnail.com/93509618.jpg" alt="Saed" loading="lazy"><div class="ep-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><div class="ep-info"><div class="ep-num">Episode 4</div><div class="ep-title">Saed</div></div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PHOTOGRAPHY -->
+<section id="photography">
+  <div class="fade">
+    <p class="sec-eye">Stills</p>
+    <h2 class="sec-head">PHOTOGRAPHY</h2>
+  </div>
+  <div class="photo-cats-grid fade">
+    <div class="photo-cat-card" data-album="abstract" data-label="Abstract"><img src="photos/abstract/cover.jpg" alt="Abstract" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">ABSTRACT</div><div class="photo-cat-sub">View Album</div></div></div>
+    <div class="photo-cat-card" data-album="film" data-label="Film" style="background:var(--surface);"><img src="photos/Film/cover.jpg" alt="Film" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">FILM</div><div class="photo-cat-sub">View Album</div></div></div>
+    <div class="photo-cat-card" data-album="landscape" data-label="Landscape &amp; Travel"><img src="photos/landscape/cover.jpg" alt="Landscape" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">LANDSCAPE &amp; TRAVEL</div><div class="photo-cat-sub">View Album</div></div></div>
+    <div class="photo-cat-card" data-album="people" data-label="People"><img src="photos/people/cover.jpg" alt="People" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">PEOPLE</div><div class="photo-cat-sub">View Album</div></div></div>
+    <div class="photo-cat-card" data-album="wildlife" data-label="Wild Life"><img src="photos/wildlife/cover.jpg" alt="Wildlife" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">WILD LIFE</div><div class="photo-cat-sub">View Album</div></div></div>
+    <div class="photo-cat-card" data-album="panorama" data-label="Panorama" style="background:var(--surface);"><img src="photos/panorama/cover.jpg" alt="Panorama" onerror="this.style.opacity='0';this.parentElement.style.background='var(--surface)'"><div class="photo-cat-over"><div class="photo-cat-label">PANORAMA</div><div class="photo-cat-sub">View Album</div></div></div>
+  </div>
+</section>
+
+<!-- ALBUM VIEWER -->
+<div class="album-overlay" id="albumOverlay">
+  <div class="album-bar">
+    <div class="album-bar-left"><span class="album-cat-label" id="albumCatLabel"></span><span class="album-photo-count" id="albumCount"></span></div>
+    <div class="album-bar-right">
+      <button class="lay-btn active" data-layout="grid">Grid</button>
+      <button class="lay-btn" data-layout="carousel">Carousel</button>
+      <button class="lay-btn" data-layout="fullpage">Full Page</button>
+      <button class="album-close-btn" id="albumClose">X Close</button>
+    </div>
+  </div>
+  <div class="album-body" id="albumBody"></div>
+</div>
+<div class="alb-lb" id="albLb"><button class="alb-lb-x" id="albLbX">X Close</button><img id="albLbImg" src="" alt=""></div>
+
+<div class="divider"></div>
+
+<!-- HEAD OF MEDIA -->
+<section id="headofmedia">
+  <div class="fade">
+    <p class="sec-eye">Leadership</p>
+    <h2 class="sec-head">HEAD OF MEDIA</h2>
+  </div>
+  <div class="hom-grid fade">
+    <div>
+      <p class="hom-statement">Built and led full in-house media divisions from the ground up. Strategy, production, creative direction, and execution. Translating brand vision into cinematic content across digital, campaign, and broadcast channels.</p>
+      <div class="stats-grid">
+        <div class="stat-cell"><div class="stat-n">16+</div><div class="stat-l">Years Experience</div></div>
+        <div class="stat-cell"><div class="stat-n">30+</div><div class="stat-l">Countries Filmed</div></div>
+        <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">Languages</div></div>
+        <div class="stat-cell"><div class="stat-n" style="font-size:28px;line-height:1.2;">Full Scope</div><div class="stat-l">In-House &amp; Outsourced Production</div></div>
+      </div>
+      <button class="hom-report-btn" id="openHomReport">View Full Media Report &rarr;</button>
+    </div>
+    <div>
+      <h3 class="hom-highlights-title">PRODUCTION HIGHLIGHTS</h3>
+      <div class="hom-highlights">
+        <div class="highlight-item"><div class="hi-title">Full Media Department Built from Zero</div><div class="hi-desc">Designed and implemented a complete in-house production pipeline: studio setup, equipment procurement, and team hiring across producers, social media managers, photographers, videographers, editors, and graphic designers. Built to serve brand content strategy across multiple sectors.</div></div>
+        <div class="highlight-item"><div class="hi-title">International Reach Across Industries</div><div class="hi-desc">Tourism, documentary, brand, sports, fashion, luxury hospitality, and retail productions across MENA, Europe, Asia, and beyond. Directing, guiding teams, and building full productions from the ground up in each market.</div></div>
+        <div class="highlight-item"><div class="hi-title">Multi-Format Content Leadership</div><div class="hi-desc">Oversaw production across broadcast, digital, commercials, social, and experiential formats, from 60-second brand films to long-form documentary series and live event coverage.</div></div>
+        <div class="highlight-item"><div class="hi-title">Brand Creative Direction</div><div class="hi-desc">Led visual identity and creative direction for multiple brands, shaping campaign strategy tied directly to measurable outcomes, brand elevation, audience growth, and revenue impact.</div></div>
+        <div class="highlight-item"><div class="hi-title">End-to-End Production Management</div><div class="hi-desc">Pre-production to final delivery: concept, scripting, casting, location, shoot, edit, colour, sound, and distribution as the foundation of the in-house structure. Managed strategic outsourcing of crew and specialist creatives for larger campaigns and advanced productions.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid fade">
+    <div class="about-img-col">
+      <div class="about-img-wrap">
+        <img src="BecharafilmmakingphotoDSCF0670.jpg" alt="Bechara El Khoury" onerror="this.style.minHeight='480px';this.style.background='#161616'">
+      </div>
+      <p class="about-img-caption">Bechara El Khoury &middot; Director &middot; DOP &middot; Dubai</p>
+    </div>
+    <div class="about-text-col">
+      <p class="sec-eye">About</p>
+      <h2 class="sec-head" style="font-size:clamp(40px,5vw,68px);margin-bottom:32px;">BECHARA<br>EL KHOURY</h2>
+      <p class="about-bio-text">
+        With over <strong>16 years of experience across 30+ countries</strong>, I work at the intersection of storytelling, visual craft, and production leadership. As a Director and Cinematographer, I bring emotion and precision to screen, whether for commercials, documentaries, music videos, branded content, or social media.
+        <br><br>
+        I also lead creative teams as <strong>Head of Media</strong>, overseeing concept development, filming, and post-production with a focus on quality and meaningful narratives. From remote nature shoots to high-end studio work, I thrive on creating visuals that resonate deeply and leave lasting impact, while building full media production departments from the ground up.
+      </p>
+      <div class="about-divider"></div>
+      <p class="about-beyond-label">Beyond Filmmaking</p>
+      <p class="about-beyond-text">
+        Founder of <strong>Leaf and Hook</strong>, a certified expert and teacher in cold therapy, breathwork, and nature survival. Operating since 2026 across <strong>15+ countries</strong>, leading expeditions and workshops that help people build resilience in extreme environments.
+        <br><br>
+        <strong>Multi-instrumentalist</strong> and creator of <strong>Prana Harmony</strong>, live music and breathwork journeys that merge sonic atmosphere with physiological transformation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="contact-heading fade">LET'S<br>CREATE</h2>
+  <div class="contact-info fade">
+    <a href="mailto:bshara@bsharakhoury.com" class="contact-email">bshara@bsharakhoury.com</a>
+    <span class="contact-phone">+971 50 440 3831</span>
+    <span class="contact-loc">Dubai, UAE &middot; Available Worldwide</span>
+  </div>
+  <div class="contact-links fade">
+    <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank" class="contact-pill">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://www.instagram.com/bshara.in.filmmaking/" target="_blank" class="contact-pill">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span class="foot-l">Bechara El Khoury &copy; 2025</span>
+  <span class="foot-r">Director &middot; Cinematographer &middot; Head of Media</span>
+</footer>
+
+<script>
+// NAV
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
+document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+
+// FADE IN
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:0.07});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+// ACCORDION
+document.querySelectorAll('.film-cat-header').forEach(h=>h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
+
+// SCROLL ARROWS
+document.querySelectorAll('.scroll-wrapper').forEach(wrapper=>{
+  const track=wrapper.querySelector('.film-scroll-track');
+  const leftBtn=wrapper.querySelector('.scroll-arrow.left');
+  const rightBtn=wrapper.querySelector('.scroll-arrow.right');
+  if(!track||!leftBtn||!rightBtn)return;
+  const step=240;
+  function updateArrows(){
+    leftBtn.classList.toggle('hidden',track.scrollLeft<=0);
+    rightBtn.classList.toggle('hidden',track.scrollLeft>=track.scrollWidth-track.clientWidth-2);
+  }
+  leftBtn.addEventListener('click',e=>{e.stopPropagation();track.scrollBy({left:-step,behavior:'smooth'});});
+  rightBtn.addEventListener('click',e=>{e.stopPropagation();track.scrollBy({left:step,behavior:'smooth'});});
+  track.addEventListener('scroll',updateArrows,{passive:true});
+  setTimeout(updateArrows,300);
+});
+
+// VIDEO MODAL
+const vmodal=document.getElementById('vmodal'),vf=document.getElementById('vmodalFrame');
+function openV(src){vf.src=src;vmodal.classList.add('open');document.body.style.overflow='hidden';}
+function closeV(){vmodal.classList.remove('open');vf.src='';document.body.style.overflow='';}
+document.querySelectorAll('.film-thumb:not(.series-thumb)').forEach(t=>t.addEventListener('click',()=>openV(t.dataset.src)));
+document.getElementById('vmodalClose').addEventListener('click',closeV);
+vmodal.addEventListener('click',e=>{if(e.target===vmodal)closeV();});
+
+// SERIES OVERLAYS
+document.querySelectorAll('.series-thumb').forEach(t=>{
+  t.addEventListener('click',()=>{
+    const o=document.getElementById('series-'+t.dataset.series);
+    if(o){o.classList.add('open');document.body.style.overflow='hidden';}
+  });
+});
+document.querySelectorAll('.series-close-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{btn.closest('.series-overlay').classList.remove('open');document.body.style.overflow='';});
+});
+document.querySelectorAll('.ep-card').forEach(card=>{
+  card.addEventListener('click',()=>openV(card.dataset.src));
+});
+
+// HEAD OF MEDIA - open in new tab (bundled JS app cannot run in iframe due to browser security)
+document.getElementById('openHomReport').addEventListener('click',()=>{
+  window.open('headofmedia.html','_blank');
+});
+
+// PHOTO ALBUMS
+const photoData={
+  abstract:[
+    {src:'photos/abstract/2-slide pics websitne.jpg'},
+    {src:"photos/abstract/9' through.jpg"},
+    {src:'photos/abstract/DSC094725-2.jpg'},
+    {src:'photos/abstract/DSC095997.jpg'},
+    {src:'photos/abstract/IMG_0112.jpg'},
+    {src:'photos/abstract/IMG_2558.jpg'},
+    {src:'photos/abstract/IMG_6284.jpg'},
+    {src:'photos/abstract/IMG_7896.jpg'},
+    {src:'photos/abstract/IMG_7932(s).jpg'},
+    {src:'photos/abstract/K.O.jpg'},
+    {src:'photos/abstract/Rust bladizerr.jpg'},
+    {src:'photos/abstract/the feastr.jpg'},
+  ],
+  film:[
+    {src:'photos/Film/19A000222.jpg'},
+    {src:'photos/Film/54430026.jpg'},
+    {src:'photos/Film/625900023.jpg'},
+    {src:'photos/Film/62590001.jpg'},
+    {src:'photos/Film/62590024.jpg'},
+    {src:'photos/Film/62590025.jpg'},
+    {src:'photos/Film/63340002.jpg'},
+    {src:'photos/Film/73230021.jpg'},
+    {src:'photos/Film/62590014.jpg'},
+    {src:'photos/Film/Dekhoune2.jpg'},
+    {src:'photos/Film/DSC01584.jpg'},
+    {src:'photos/Film/Photo0910A.jpg'},
+    {src:'photos/Film/PICT0020.jpg'},
+    {src:'photos/Film/PICT0027.jpg'},
+    {src:'photos/Film/31A00034.jpg'},
+  ],
+  landscape:[
+    {src:'photos/landscape/DJI_0176.jpg'},
+    {src:'photos/landscape/DSC00180.jpg'},
+    {src:'photos/landscape/DSC00278.jpg'},
+    {src:'photos/landscape/DSC01559.jpg'},
+    {src:'photos/landscape/DSC01768.jpg'},
+    {src:'photos/landscape/DSC01872.jpg'},
+    {src:'photos/landscape/DSC02965.jpg'},
+    {src:'photos/landscape/DSC03002.jpg'},
+    {src:'photos/landscape/DSC03004-Edit-Edi...-Edit.jpg'},
+    {src:'photos/landscape/DSC03507.jpg'},
+    {src:'photos/landscape/DSC03712.jpg'},
+    {src:'photos/landscape/DSC03722.jpg'},
+    {src:'photos/landscape/DJI0673.jpg'},
+    {src:'photos/landscape/DSC06301.jpg'},
+    {src:'photos/landscape/DSC06512.jpg'},
+    {src:'photos/landscape/DSC08088.jpg'},
+    {src:'photos/landscape/DSC08567.jpg'},
+    {src:'photos/landscape/DSC08131.jpg'},
+    {src:'photos/landscape/DSC08176.jpg'},
+    {src:'photos/landscape/DSC08346-2.jpg'},
+    {src:'photos/landscape/DSC08364.jpg'},
+    {src:'photos/landscape/DSC08371.jpg'},
+    {src:'photos/landscape/DSC08419.jpg'},
+    {src:'photos/landscape/DSC08451.jpg'},
+    {src:'photos/landscape/DSC08558.jpg'},
+    {src:'photos/landscape/DSC09486.jpg'},
+    {src:'photos/landscape/DSC09716.jpg'},
+    {src:'photos/landscape/DSC09681.jpg'},
+    {src:'photos/landscape/DSC09774.jpg'},
+    {src:'photos/landscape/DSC0988288Edit.jpg'},
+    {src:'photos/landscape/IMG8775.jpg'},
+  ],
+  people:[
+    {src:'photos/people/bleu.jpg'},
+    {src:'photos/people/DSC00894.jpg'},
+    {src:'photos/people/DSC00935.jpg'},
+    {src:'photos/people/DSC01182.jpg'},
+    {src:'photos/people/DSC01405.jpg'},
+    {src:'photos/people/DSC01519.jpg'},
+    {src:'photos/people/DSC01543.jpg'},
+    {src:'photos/people/DSC02045.jpg'},
+    {src:'photos/people/DSC02064.jpg'},
+    {src:'photos/people/DSC02221.jpg'},
+    {src:'photos/people/DSC02354.jpg'},
+    {src:'photos/people/DSC02926.jpg'},
+    {src:'photos/people/DSC05424.jpg'},
+    {src:'photos/people/DSC05600.jpg'},
+    {src:'photos/people/DSC06360.jpg'},
+    {src:'photos/people/DSC06403.jpg'},
+    {src:'photos/people/DSC06414.jpg'},
+    {src:'photos/people/DSC07186.jpg'},
+    {src:'photos/people/DSC07460.jpg'},
+    {src:'photos/people/DSC08004.jpg'},
+    {src:'photos/people/Happy wait.jpg'},
+    {src:'photos/people/IMG_0001-3.jpg'},
+    {src:'photos/people/IMG_133g6.jpg'},
+    {src:"photos/people/IMG_388k2 copy.jpg"},
+    {src:'photos/people/IMG_0754.jpg'},
+    {src:'photos/people/IMG_1063.jpg'},
+    {src:'photos/people/IMG_1351.jpg'},
+    {src:'photos/people/IMG_3871.jpg'},
+    {src:'photos/people/IMG_4332.jpg'},
+    {src:'photos/people/IMG_4763.jpg'},
+    {src:'photos/people/IMG_7521.jpg'},
+    {src:'photos/people/IMG_9176.jpg'},
+    {src:'photos/people/IMG_9483.jpg'},
+    {src:'photos/people/wait outside.jpg'},
+  ],
+  wildlife:[
+    {src:'photos/wildlife/DSC09170.jpg'},
+    {src:'photos/wildlife/IMG_6888.jpg'},
+    {src:'photos/wildlife/IMG_7247.jpg'},
+    {src:'photos/wildlife/IMG_7263 2.jpg'},
+    {src:'photos/wildlife/IMG_7324ff.jpg'},
+    {src:'photos/wildlife/IMG_7456.jpg'},
+    {src:'photos/wildlife/IMG_7880.jpg'},
+    {src:'photos/wildlife/IMG_8009.jpg'},
+    {src:'photos/wildlife/IMG_8057.jpg'},
+    {src:'photos/wildlife/IMG_8517.jpg'},
+    {src:'photos/wildlife/IMG_9021.jpg'},
+    {src:'photos/wildlife/IMG_9258.jpg'},
+    {src:'photos/wildlife/IMG_9942.jpg'},
+  ],
+  panorama:[
+    {src:'photos/panorama/DJI_0082 Panorama.jpg'},
+    {src:'photos/panorama/DJI_0086 Pano.jpg'},
+    {src:'photos/panorama/DJI_0090 Panorama.jpg'},
+    {src:'photos/panorama/DJI0254.jpg'},
+    {src:'photos/panorama/DSC02803 Panorama.jpg'},
+    {src:'photos/panorama/DSC03868.jpg'},
+    {src:'photos/panorama/IMG_7420.jpg'},
+    {src:'photos/panorama/IMG_8837.jpg'},
+    {src:'photos/panorama/Pano Cape 2.jpg'},
+    {src:'photos/panorama/Panotablemountain.jpg'},
+    {src:'photos/panorama/Panorama Barca.jpg'},
+  ]
+};
+
+let curAlbum=[],curLayout='grid',carIdx=0;
+const albOver=document.getElementById('albumOverlay'),albLbl=document.getElementById('albumCatLabel'),albCnt=document.getElementById('albumCount'),albBody=document.getElementById('albumBody'),albLb=document.getElementById('albLb'),albLbImg=document.getElementById('albLbImg');
+
+document.querySelectorAll('.photo-cat-card').forEach(card=>card.addEventListener('click',()=>{
+  curAlbum=photoData[card.dataset.album]||[];curLayout='grid';carIdx=0;
+  albLbl.textContent=card.dataset.label.toUpperCase();
+  albCnt.textContent=curAlbum.length?curAlbum.length+' photos':'';
+  document.querySelectorAll('.lay-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector('[data-layout="grid"]').classList.add('active');
+  renderAlbum();albOver.classList.add('open');document.body.style.overflow='hidden';
+}));
+
+document.getElementById('albumClose').addEventListener('click',()=>{albOver.classList.remove('open');document.body.style.overflow='';});
+document.querySelectorAll('.lay-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.lay-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  curLayout=btn.dataset.layout;carIdx=0;renderAlbum();
+}));
+
+function renderAlbum(){
+  albBody.innerHTML='';
+  if(!curAlbum.length){albBody.innerHTML='<p class="alb-empty">Album coming soon.</p>';return;}
+  if(curLayout==='grid')doGrid();
+  else if(curLayout==='carousel')doCarousel();
+  else doFull();
+}
+
+function doGrid(){
+  const g=document.createElement('div');g.className='alb-grid';
+  curAlbum.forEach(p=>{
+    const item=document.createElement('div');item.className='alb-grid-item';
+    const img=document.createElement('img');img.alt='';img.loading='lazy';
+    img.addEventListener('load',()=>{
+      requestAnimationFrame(()=>img.classList.add('loaded'));
+    });
+    img.src=p.src;
+    item.appendChild(img);
+    item.addEventListener('click',()=>{albLbImg.src=p.src;albLb.classList.add('open');});
+    g.appendChild(item);
+  });
+  albBody.appendChild(g);
+}
+
+function doCarousel(){
+  const wrap=document.createElement('div');wrap.className='alb-carousel';
+  const stage=document.createElement('div');stage.className='car-stage-fixed';
+  const mi=document.createElement('img');mi.src=curAlbum[carIdx].src;mi.alt='';
+  stage.appendChild(mi);
+  const ctrl=document.createElement('div');ctrl.className='car-controls';
+  const prev=document.createElement('button');prev.className='car-arrow';prev.textContent='‹';
+  const cnt=document.createElement('span');cnt.className='car-count';cnt.textContent=(carIdx+1)+' / '+curAlbum.length;
+  const next=document.createElement('button');next.className='car-arrow';next.textContent='›';
+  ctrl.appendChild(prev);ctrl.appendChild(cnt);ctrl.appendChild(next);
+  const strip=document.createElement('div');strip.className='car-strip';
+  curAlbum.forEach((p,i)=>{
+    const t=document.createElement('img');t.src=p.src;t.loading='lazy';
+    if(i===carIdx)t.classList.add('active');
+    t.addEventListener('click',()=>goTo(i));
+    strip.appendChild(t);
+  });
+  function goTo(i){
+    carIdx=i;
+    mi.style.opacity='0';
+    setTimeout(()=>{mi.src=curAlbum[i].src;mi.style.opacity='1';},220);
+    cnt.textContent=(i+1)+' / '+curAlbum.length;
+    strip.querySelectorAll('img').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+    const active=strip.querySelectorAll('img')[i];
+    if(active)active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  }
+  prev.addEventListener('click',()=>goTo((carIdx-1+curAlbum.length)%curAlbum.length));
+  next.addEventListener('click',()=>goTo((carIdx+1)%curAlbum.length));
+  wrap.appendChild(stage);wrap.appendChild(ctrl);wrap.appendChild(strip);
+  albBody.appendChild(wrap);
+}
+
+function doFull(){
+  const wrap=document.createElement('div');wrap.className='alb-full';
+  curAlbum.forEach(p=>{
+    const item=document.createElement('div');item.className='alb-full-item';
+    const img=document.createElement('img');img.alt='';img.loading='lazy';
+    img.style.cssText='opacity:0;transition:opacity 0.5s ease;';
+    img.addEventListener('load',()=>{img.style.opacity='1';});
+    img.src=p.src;
+    item.appendChild(img);wrap.appendChild(item);
+  });
+  albBody.appendChild(wrap);
+}
+
+document.getElementById('albLbX').addEventListener('click',()=>{albLb.classList.remove('open');albLbImg.src='';});
+albLb.addEventListener('click',e=>{if(e.target===albLb){albLb.classList.remove('open');albLbImg.src='';}});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    closeV();
+    albOver.classList.remove('open');
+    albLb.classList.remove('open');albLbImg.src='';
+    document.querySelectorAll('.series-overlay.open').forEach(o=>o.classList.remove('open'));
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+</script>
+</body>
+</html>
