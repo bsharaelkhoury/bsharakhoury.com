@@ -291,7 +291,7 @@ footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify
 .cm-field>span,.cm-group legend{font-family:var(--fm);font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--subtle);padding:0;}
 .cm-group legend em{font-style:normal;color:var(--muted);}
 .cm-field input,.cm-field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--muted);border-radius:0;color:var(--white);font-family:var(--fb);font-size:17px;font-weight:300;padding:8px 0 12px;transition:border-color 0.25s;}
-.cm-field textarea{resize:vertical;min-height:110px;line-height:1.6;}
+.cm-field textarea{resize:vertical;min-height:200px;line-height:1.6;}
 .cm-field input::placeholder,.cm-field textarea::placeholder{color:var(--muted);}
 .cm-field input:focus,.cm-field textarea:focus{outline:none;border-bottom-color:var(--gold);}
 .cm-field .cm-err{border-bottom-color:#c0584f;}
