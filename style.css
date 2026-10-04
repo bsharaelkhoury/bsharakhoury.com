@@ -271,7 +271,7 @@ footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}}
 
 /* CONTACT POPUP */
-.contact-cta{cursor:pointer;border:none;}
+.contact-cta{cursor:pointer;border:none;display:block;width:max-content;max-width:100%;margin:0 auto 56px;}
 .cmodal{position:fixed;inset:0;z-index:350;background:var(--black);opacity:0;pointer-events:none;visibility:hidden;transition:opacity 0.35s,visibility 0.35s;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .cmodal.open{opacity:1;pointer-events:all;visibility:visible;}
 .cm-close{position:fixed;top:20px;right:32px;z-index:2;background:none;border:1px solid var(--border);color:var(--text);font-family:var(--fm);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;padding:10px 16px;transition:all 0.2s;}
@@ -337,3 +337,6 @@ footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify
   .hom-report-btn{min-height:48px;}
   .skip-link{min-height:44px;}
 }
+
+.contact-info{margin-bottom:40px;}
+.contact-links{margin-top:0;}
