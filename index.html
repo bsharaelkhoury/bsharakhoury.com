@@ -53,7 +53,7 @@
       </a>
     </div>
     <div class="nav-divider"></div>
-    <a href="#contact" class="nav-contact">Contact</a>
+    <a href="#contact" class="nav-contact" data-open-contact>Contact</a>
   </div>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
@@ -67,7 +67,7 @@
   <a href="#photography" class="mob-link">Photography</a>
   <a href="#headofmedia" class="mob-link">Head of Media</a>
   <a href="#about" class="mob-link">About</a>
-  <a href="#contact" class="mob-link">Contact</a>
+  <a href="#contact" class="mob-link" data-open-contact>Contact</a>
   <div class="mob-social">
     <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
     <a href="https://www.instagram.com/bshara.in.filmmaking/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
@@ -347,6 +347,65 @@
 </section>
 
 <!-- VIDEO MODAL -->
+<!-- CONTACT POPUP -->
+<div class="cmodal" id="cmodal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+  <button type="button" class="cm-close" id="cmClose" aria-label="Close contact form">X Close</button>
+  <div class="cm-inner">
+    <div class="cm-left">
+      <span class="cm-eyebrow">Start a project</span>
+      <h2 class="cm-title" id="cmTitle">LET'S<br>CREATE</h2>
+      <p class="cm-lead">Tell me what you are making. I read every message and reply personally, usually within 24 hours.</p>
+      <ul class="cm-details">
+        <li><span>Email</span><a href="mailto:bshara@bsharakhoury.com">bshara@bsharakhoury.com</a></li>
+        <li><span>Phone</span><a href="tel:+971504403831">+971 50 440 3831</a></li>
+        <li><span>Based in</span>Dubai, UAE &middot; Available worldwide</li>
+      </ul>
+    </div>
+    <div class="cm-right">
+      <form class="cm-form" id="contactForm" novalidate>
+        <div class="cm-row">
+          <label class="cm-field"><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+          <label class="cm-field"><span>Your email</span><input type="email" name="email" autocomplete="email" inputmode="email" required></label>
+        </div>
+        <fieldset class="cm-group">
+          <legend>What do you need?</legend>
+          <div class="cm-chips">
+            <label class="cm-chip"><input type="radio" name="project_type" value="Commercial / Brand film" checked><span>Commercial / Brand film</span></label>
+            <label class="cm-chip"><input type="radio" name="project_type" value="Documentary / Storytelling"><span>Documentary / Story</span></label>
+            <label class="cm-chip"><input type="radio" name="project_type" value="Social media / Content"><span>Social content</span></label>
+            <label class="cm-chip"><input type="radio" name="project_type" value="Photography"><span>Photography</span></label>
+            <label class="cm-chip"><input type="radio" name="project_type" value="Head of Media / Consulting"><span>Head of Media</span></label>
+            <label class="cm-chip"><input type="radio" name="project_type" value="Other"><span>Something else</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="cm-group">
+          <legend>Budget <em>(optional)</em></legend>
+          <div class="cm-chips">
+            <label class="cm-chip"><input type="radio" name="budget" value="Under AED 20k"><span>Under AED 20k</span></label>
+            <label class="cm-chip"><input type="radio" name="budget" value="AED 20k to 50k"><span>AED 20k to 50k</span></label>
+            <label class="cm-chip"><input type="radio" name="budget" value="AED 50k to 100k"><span>AED 50k to 100k</span></label>
+            <label class="cm-chip"><input type="radio" name="budget" value="AED 100k+"><span>AED 100k+</span></label>
+            <label class="cm-chip"><input type="radio" name="budget" value="Not sure yet"><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+        <label class="cm-field"><span>Tell me about the project</span><textarea name="message" rows="4" placeholder="What, where, when, and anything I should know." required></textarea></label>
+        <input type="hidden" name="_subject" value="New project enquiry from bsharakhoury.com">
+        <input type="text" name="_gotcha" class="cm-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="cm-actions">
+          <button type="submit" class="cm-submit" id="cfSubmit">Send message</button>
+          <p class="cm-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+      <div class="cm-success" id="cmSuccess" hidden>
+        <span class="cm-eyebrow">Message sent</span>
+        <h3>THANK YOU</h3>
+        <p>Your message is with me. I will reply to the email you gave, usually within 24 hours.</p>
+        <button type="button" class="cm-submit" id="cmDone">Back to site</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Video player">
   <div class="vmodal-box">
     <button class="vmodal-close" id="vmodalClose">X Close</button>
@@ -519,30 +578,7 @@
     <a href="tel:+971504403831" class="contact-phone">+971 50 440 3831</a>
         <span class="contact-loc">Dubai, UAE &middot; Available Worldwide</span>
   </div>
-  <form class="contact-form fade" id="contactForm" novalidate>
-    <h3 class="cf-title">Send a message</h3>
-    <div class="cf-row">
-      <label class="cf-field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
-      <label class="cf-field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-    </div>
-    <div class="cf-row">
-      <label class="cf-field"><span>Project type</span>
-        <select name="project_type">
-          <option>Commercial / Brand film</option>
-          <option>Documentary / Storytelling</option>
-          <option>Social media / Content</option>
-          <option>Photography</option>
-          <option>Head of Media / Consulting</option>
-          <option>Other</option>
-        </select>
-      </label>
-      <label class="cf-field"><span>Budget range (optional)</span><input type="text" name="budget" placeholder="e.g. AED 20k - 50k"></label>
-    </div>
-    <label class="cf-field"><span>Tell me about the project</span><textarea name="message" rows="5" required></textarea></label>
-    <input type="text" name="_gotcha" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button type="submit" class="contact-cta" id="cfSubmit">Send message</button>
-    <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
-  </form>
+  <button type="button" class="contact-cta fade" data-open-contact>Start a project</button>
   <div class="contact-links fade">
     <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank" rel="noopener noreferrer" class="contact-pill">
       <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
