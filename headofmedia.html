@@ -271,6 +271,15 @@ footer{border-top:1px solid var(--border);padding:64px 0;}
   .hero-title{font-size:clamp(60px,18vw,90px);}
   .reel-rail{padding:0 20px 24px;}
 }
+/* MOBILE OVERFLOW FIX */
+html,body{overflow-x:hidden;}
+.viz-wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+@media(max-width:1024px){.viz-wrap{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:640px){
+  .viz-card{padding:32px 20px;}
+  .viz-sub{display:block;margin:8px 0 0;}
+  .donut-row{flex-direction:column;align-items:flex-start;gap:28px;}
+}
 </style>
 </head>
 <body>
