@@ -517,9 +517,32 @@
   <div class="contact-info fade">
     <a href="mailto:bshara@bsharakhoury.com" class="contact-email">bshara@bsharakhoury.com</a>
     <a href="tel:+971504403831" class="contact-phone">+971 50 440 3831</a>
-    <a href="mailto:bshara@bsharakhoury.com?subject=Project%20enquiry&body=Hi%20Bechara%2C%0A%0AProject%20type%3A%0ALocation%3A%0ADates%3A%0ABudget%20range%3A%0ADetails%3A%0A" class="contact-cta">Start a project</a>
-    <span class="contact-loc">Dubai, UAE &middot; Available Worldwide</span>
+        <span class="contact-loc">Dubai, UAE &middot; Available Worldwide</span>
   </div>
+  <form class="contact-form fade" id="contactForm" novalidate>
+    <h3 class="cf-title">Send a message</h3>
+    <div class="cf-row">
+      <label class="cf-field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+      <label class="cf-field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+    </div>
+    <div class="cf-row">
+      <label class="cf-field"><span>Project type</span>
+        <select name="project_type">
+          <option>Commercial / Brand film</option>
+          <option>Documentary / Storytelling</option>
+          <option>Social media / Content</option>
+          <option>Photography</option>
+          <option>Head of Media / Consulting</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label class="cf-field"><span>Budget range (optional)</span><input type="text" name="budget" placeholder="e.g. AED 20k - 50k"></label>
+    </div>
+    <label class="cf-field"><span>Tell me about the project</span><textarea name="message" rows="5" required></textarea></label>
+    <input type="text" name="_gotcha" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="contact-cta" id="cfSubmit">Send message</button>
+    <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
+  </form>
   <div class="contact-links fade">
     <a href="https://www.linkedin.com/in/bshara-el-khoury/" target="_blank" rel="noopener noreferrer" class="contact-pill">
       <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>

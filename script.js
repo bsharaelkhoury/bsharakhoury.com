@@ -174,3 +174,36 @@ document.addEventListener('keydown',e=>{
   }
 });
 const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=new Date().getFullYear();
+
+// CONTACT FORM (Formspree). Paste the form ID after creating a form at formspree.io, e.g. 'xyzabcde'.
+// While empty, the form falls back to opening the visitor's email app with the message filled in.
+const FORMSPREE_ID='';
+const cf=document.getElementById('contactForm');
+if(cf){
+  const status=document.getElementById('cfStatus'),btn=document.getElementById('cfSubmit');
+  const say=(msg,cls)=>{status.textContent=msg;status.className='cf-status '+(cls||'');};
+  cf.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const d=new FormData(cf);
+    let bad=false;
+    cf.querySelectorAll('[required]').forEach(f=>{
+      const empty=!f.value.trim()||(f.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value));
+      f.classList.toggle('cf-err',empty);if(empty)bad=true;
+    });
+    if(bad){say('Please fill in your name, a valid email and a message.','err');return;}
+    if(d.get('_gotcha')){say('Thank you. Your message was sent.','ok');return;}
+    if(!FORMSPREE_ID){
+      const body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nProject type: '+d.get('project_type')+'\nBudget: '+(d.get('budget')||'-')+'\n\n'+d.get('message');
+      location.href='mailto:bshara@bsharakhoury.com?subject='+encodeURIComponent('Project enquiry from '+d.get('name'))+'&body='+encodeURIComponent(body);
+      return;
+    }
+    btn.disabled=true;say('Sending...');
+    try{
+      const r=await fetch('https://formspree.io/f/'+FORMSPREE_ID,{method:'POST',body:d,headers:{Accept:'application/json'}});
+      if(!r.ok)throw new Error(r.status);
+      cf.reset();say('Thank you. Your message was sent and I will reply soon.','ok');
+    }catch(err){
+      say('Sorry, that did not send. Please email bshara@bsharakhoury.com directly.','err');
+    }finally{btn.disabled=false;}
+  });
+}

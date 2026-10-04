@@ -18,6 +18,7 @@ Hosted on Cloudflare Pages, which deploys automatically from this repo.
 
 ## Common updates
 - **Add a photo:** save a JPG (about 1800px wide, under 500 KB) in `photos/<category>/`, then add one line to that category in `photos.js`.
+- **Contact form:** set `FORMSPREE_ID` near the bottom of `script.js` (see formspree.io). Empty = falls back to opening the visitor's email app.
 - **Add a film:** copy an existing `film-thumb` block in `index.html` and change the Vimeo/YouTube ID, thumbnail and title.
 - **Change contact or social links:** search `index.html` for `mailto:`, `linkedin.com`, `instagram.com`.
 - **Change colours or fonts:** edit the `:root` variables at the top of `style.css`.
