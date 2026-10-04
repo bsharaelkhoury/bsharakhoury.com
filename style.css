@@ -287,3 +287,14 @@ footer{padding:24px 48px;border-top:1px solid var(--border);display:flex;justify
 .cf-status.ok{color:var(--gold);}
 .cf-status.err{color:#e08a82;}
 @media (max-width:640px){.cf-row{grid-template-columns:1fr;}}
+
+/* MOBILE POLISH */
+@media (max-width:900px){
+  #hero{height:100svh;min-height:560px;}
+  .hero-reel iframe{min-width:calc(177.78svh);min-height:100svh;}
+  .nav-hamburger{padding:12px 8px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+  .mob-close,.vmodal-close,.alb-lb-x,.series-close-btn,.album-close-btn,.lay-btn{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;}
+  .contact-email,.contact-phone{display:inline-block;padding:10px 0;}
+  .hom-report-btn{min-height:48px;}
+  .skip-link{min-height:44px;}
+}
