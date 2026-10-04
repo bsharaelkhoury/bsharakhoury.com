@@ -177,7 +177,7 @@ const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=new Da
 
 // CONTACT FORM (Formspree). Paste the form ID after creating a form at formspree.io, e.g. 'xyzabcde'.
 // While empty, the form falls back to opening the visitor's email app with the message filled in.
-const FORMSPREE_ID='';
+const FORMSPREE_ID='mdeanyek';
 const cf=document.getElementById('contactForm');
 if(cf){
   const status=document.getElementById('cfStatus'),btn=document.getElementById('cfSubmit');
